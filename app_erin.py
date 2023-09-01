@@ -19,7 +19,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_alice = epr_sock["alice"].create_keep()[0]
         q_ent_gary = epr_sock["gary"].create_keep()[0]
-
+        erin.flush()
     # Print the outcome
     #print(f"erin's outcome with Bob is: {m}")
 

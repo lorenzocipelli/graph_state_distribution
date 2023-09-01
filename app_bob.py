@@ -27,7 +27,7 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         q_ent_frank.H()
         bob.flush()
         
-        print("STAR EXPANSION BEGIN")
+        #print("STAR EXPANSION cBEGIN")
         """ local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
         
         local_complementation(q_ent_alice, [q_ent_charlie, q_ent_david])
@@ -40,7 +40,7 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         y_measurement([q_ent_charlie, q_ent_david]) """
         #star_expansion(q_ent_alice, [q_ent_charlie, q_ent_frank], belongs_W)
 
-        print("STAR EXPANSION END")
+        #print("STAR EXPANSION END")
         
         bob.flush()
 

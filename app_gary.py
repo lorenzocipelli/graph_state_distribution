@@ -17,7 +17,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with gary:
         # Receive an entangled pair using the EPR socket to bob
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
-
+        gary.flush()
     # Print the outcome
     #print(f"gary's outcome with Bob is: {m}")
 

@@ -1,5 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
+from star_expansion import star_expansion, local_edge_addition, remove_a0_local_edges, local_complementation, vertex_deletion, y_measurement
 
 def ghz_state_distribution():
     ''' iterate star_expansion() until star graph state is done ''' 
@@ -21,8 +22,11 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         # Create an entangled pair using the EPR socket to bob
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
         #m_bob = q_ent_bob.measure()
+        print("STAR EXPANSION STARTT")
+        star_expansion(q_ent_alice, [q_ent_charlie, q_ent_frank], belongs_W)
 
-        #alice.flush()
+        print("STAR EXPANSION END")
+        alice.flush()
 
         # Print the outcome
         #print(f"alice's outcome with Bob is: {m_bob}")
