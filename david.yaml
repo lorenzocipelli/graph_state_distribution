@@ -1,0 +1,6 @@
+belongs_W : true
+n_names : 3
+names:
+  - "alice"
+  - "bob"
+  - "charlie"

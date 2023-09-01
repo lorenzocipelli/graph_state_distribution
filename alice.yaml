@@ -1,0 +1,9 @@
+belongs_W : true
+n_names : 3
+names:
+  - "bob"
+  - "charlie"
+  - "david"
+#  - "erin"
+#  - "frank"
+#  - "gary"
