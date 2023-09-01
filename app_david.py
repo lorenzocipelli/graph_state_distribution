@@ -25,9 +25,7 @@ def main(app_config=None, belongs_W=True, n_names=0, names=[]):
     with david:
         # Receive an entangled pair using the EPR socket to bob
         q_ent = epr_sock_bob.recv_keep()[0]
-        # Measure the qubit
-        # m = q_ent.measure()
-        print("david ha finito")
+
     # Print the outcome
     #print(f"david's outcome with Bob is: {m}")
 
