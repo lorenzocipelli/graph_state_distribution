@@ -19,7 +19,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_bob = epr_sock["bob"].recv_keep()[0]
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
         q_ent_david = epr_sock["david"].recv_keep()[0]
-
+    
     # Print the outcome
     #print(f"charlie's outcome with Bob is: {m}")
 
