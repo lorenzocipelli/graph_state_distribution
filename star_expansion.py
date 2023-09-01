@@ -52,8 +52,23 @@ def local_edge_addition(local_qubits):
         for y in range(n_qubits-1-x) :
             local_qubits[x].cphase(local_qubits[x+y+1])
 
-def star_expansion():
+def star_expansion(a_0_qubit, c_i_qubits, belongs_W):
     ''' local_complementation()
         vertex_deletion() OR edge_addition()
         y_measurement
     '''
+    local_qubits = [a_0_qubit] + c_i_qubits
+    local_edge_addition(local_qubits)
+    local_complementation(a_0_qubit, c_i_qubits)
+    if belongs_W:
+        remove_a0_local_edges(a_0_qubit, c_i_qubits)
+    else:
+        vertex_deletion(a_0_qubit)
+    y_measurement(c_i_qubits)
+
+
+
+
+
+
+    

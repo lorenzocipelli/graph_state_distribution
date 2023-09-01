@@ -1,4 +1,4 @@
-from star_expansion import local_edge_addition, remove_a0_local_edges, local_complementation, vertex_deletion, y_measurement
+from star_expansion import star_expansion, local_edge_addition, remove_a0_local_edges, local_complementation, vertex_deletion, y_measurement
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
 
@@ -36,7 +36,7 @@ def main(app_config=None, belongs_W=True):
         bob.flush()
 
         print("STAR EXPANSION BEGIN")
-        local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
+        """ local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
         
         local_complementation(q_ent_alice, [q_ent_charlie, q_ent_david])
         
@@ -45,7 +45,9 @@ def main(app_config=None, belongs_W=True):
         else : 
             vertex_deletion(q_ent_alice)
         
-        y_measurement([q_ent_charlie, q_ent_david])
+        y_measurement([q_ent_charlie, q_ent_david]) """
+        star_expansion(q_ent_alice, [q_ent_charlie, q_ent_david], belongs_W)
+
         print("STAR EXPANSION END")
         
         bob.flush()

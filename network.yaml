@@ -38,12 +38,7 @@ nodes:
   - id: 10
     t1: 0
     t2: 0
-  - id: 11
-    t1: 0
-    t2: 0
-  - id: 12
-    t1: 0
-    t2: 0
+  
 - gate_fidelity: 1.0
   name: "bob"
   qubits:
