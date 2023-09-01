@@ -1,8 +1,8 @@
-belongs_W : true
+belongs_W: true
 other_nodes:
   - "bob"
   - "charlie"
+  - "david"
   - "alice"
-  - "erin"
   - "frank"
   - "gary"

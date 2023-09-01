@@ -5,33 +5,21 @@ def ghz_state_distribution():
     ''' iterate star_expansion() until star graph state is done ''' 
 
 
-def main(app_config=None, belongs_W=True, n_names=0, names=[]):
+def main(app_config=None, belongs_W=True, other_nodes=[]):
     # lists containing classical and EPR sockets with non-center nodes
-    c_sockets = []
-    epr_sockets = []
-    ent_qubits = []
-    local_qubits = []
+    epr_sock = {}
 
-    # for x in range(n_names) :
-    #     # Setup a classical socket to each node
-    #     c_sock_temp = Socket("alice", names[x], log_config=app_config.log_config)
-    #     c_sockets.append(c_sock_temp)
-    #     # Setup an EPR socket to each node
-    #     epr_sock_temp = EPRSocket(names[x], epr_socket_id= , remote_epr_socket_id=)
-    #     epr_sockets.append(epr_sock_temp)
-
-    epr_sock_bob = EPRSocket("bob")
-    epr_sock_charlie = EPRSocket("charlie")
-    epr_sock_david = EPRSocket("david")
+    for element in other_nodes:
+        epr_sock[element] = EPRSocket(element)
 
     alice = NetQASMConnection(
         "alice",
         log_config=app_config.log_config,
-        epr_sockets=[epr_sock_bob, epr_sock_charlie, epr_sock_david],
+        epr_sockets=list(epr_sock.values()),
     )
     with alice:
         # Create an entangled pair using the EPR socket to bob
-        q_ent_bob = epr_sock_bob.recv_keep()[0]
+        q_ent_erin = epr_sock["erin"].recv_keep()[0]
         #m_bob = q_ent_bob.measure()
 
         #alice.flush()

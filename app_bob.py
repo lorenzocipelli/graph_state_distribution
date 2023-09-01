@@ -3,38 +3,30 @@ from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
 
 
-def main(app_config=None, belongs_W=True):
-    # Setup a classical socket to alice
-    # socket_a = Socket("bob", "alice", log_config=app_config.log_config)
-    # socket_c = Socket("bob", "charlie", log_config=app_config.log_config)
-    # socket_d = Socket("bob", "david", log_config=app_config.log_config)
-    
-    # Specify an EPR socket to alice
-    epr_socket_alice = EPRSocket("alice")
-    epr_socket_charlie = EPRSocket("charlie")
-    epr_socket_david = EPRSocket("david")
+def main(app_config=None, belongs_W=True, other_nodes = []):
+    epr_sock = {}
+
+    for element in other_nodes:
+        epr_sock[element] = EPRSocket(element)
 
     bob = NetQASMConnection(
         "bob",
         log_config=app_config.log_config,
-        epr_sockets=[epr_socket_alice, epr_socket_charlie, epr_socket_david],
+        epr_sockets=list(epr_sock.values()),
     )
     with bob:
         # Create an entangled pair using the EPR socket to alice
-        q_ent_alice = epr_socket_alice.create_keep()[0]
-        q_ent_alice.H()
-        bob.flush()
-        print("creata EPR con alice")
-        q_ent_charlie = epr_socket_charlie.create_keep()[0]
+        
+        q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
         bob.flush()
         print("creata EPR con charlie")
-        q_ent_david = epr_socket_david.create_keep()[0]
+        
+        q_ent_frank = epr_sock["frank"].create_keep()[0]
+        print("creata EPR con frank")
+        q_ent_frank.H()
         bob.flush()
-        print("creata EPR con david")
-        q_ent_david.H()
-        bob.flush()
-
+        
         print("STAR EXPANSION BEGIN")
         """ local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
         
@@ -46,7 +38,7 @@ def main(app_config=None, belongs_W=True):
             vertex_deletion(q_ent_alice)
         
         y_measurement([q_ent_charlie, q_ent_david]) """
-        star_expansion(q_ent_alice, [q_ent_charlie, q_ent_david], belongs_W)
+        #star_expansion(q_ent_alice, [q_ent_charlie, q_ent_frank], belongs_W)
 
         print("STAR EXPANSION END")
         

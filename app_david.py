@@ -2,29 +2,21 @@ from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
 
 
-def main(app_config=None, belongs_W=True, n_names=0, names=[]):
+def main(app_config=None, belongs_W=True, other_nodes=[]):
 
-    c_sockets = []
-    epr_sockets = []
+    epr_sock = {}
 
-    # for x in range(n_names) :
-    #     # Setup a classical socket to each node
-    #     c_sockets.append(Socket("david", names[x], log_config=app_config.log_config))
-    #     # Setup an EPR socket to each node
-    #     epr_sockets.append(EPRSocket(names[x]))
-
-    epr_sock_alice = EPRSocket("alice")
-    epr_sock_bob = EPRSocket("bob")
-    epr_sock_charlie = EPRSocket("charlie")
+    for element in other_nodes:
+        epr_sock[element] = EPRSocket(element)
 
     david = NetQASMConnection(
         "david",
         log_config=app_config.log_config,
-        epr_sockets=[epr_sock_alice, epr_sock_bob, epr_sock_charlie],
+        epr_sockets=list(epr_sock.values()),
     )
     with david:
         # Receive an entangled pair using the EPR socket to bob
-        q_ent = epr_sock_bob.recv_keep()[0]
+        q_ent_charlie = epr_sock["charlie"].create_keep()[0]
 
     # Print the outcome
     #print(f"david's outcome with Bob is: {m}")

@@ -1,9 +1,8 @@
 belongs_W : true
-n_names : 3
-names:
+other_nodes:
   - "bob"
   - "charlie"
   - "david"
-#  - "erin"
-#  - "frank"
-#  - "gary"
+  - "erin"
+  - "frank"
+  - "gary"
