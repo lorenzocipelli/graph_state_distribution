@@ -1,4 +1,4 @@
-belongs_W: true
+belongs_W: false
 other_nodes:
   - "bob"
   - "charlie"

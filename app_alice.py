@@ -22,10 +22,6 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         # Create an entangled pair using the EPR socket to bob
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
         #m_bob = q_ent_bob.measure()
-        print("STAR EXPANSION STARTT")
-        star_expansion(q_ent_alice, [q_ent_charlie, q_ent_frank], belongs_W)
-
-        print("STAR EXPANSION END")
         alice.flush()
 
         # Print the outcome

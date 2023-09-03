@@ -1,0 +1,60 @@
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: h
+  LOG: Doing instruction h with operands ['Q0=0']
+  OPR:
+  - Q0=0
+  OUT: null
+  PRC: 25
+  QGR:
+    8770672604774:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  SID: 0
+  SIT: 8218.0
+  VID:
+  - 0
+  WCT: '2023-09-03 10:35:12.636084'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: h
+  LOG: Doing instruction h with operands ['Q0=1']
+  OPR:
+  - Q0=1
+  OUT: null
+  PRC: 25
+  QGR:
+    8770671452799:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8770672604774:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 1
+  SID: 1
+  SIT: 13470.0
+  VID:
+  - 1
+  WCT: '2023-09-03 10:35:13.148246'

@@ -20,14 +20,12 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
         bob.flush()
-        print("creata EPR con charlie")
         
         q_ent_frank = epr_sock["frank"].create_keep()[0]
-        print("creata EPR con frank")
         q_ent_frank.H()
         bob.flush()
         
-        #print("STAR EXPANSION cBEGIN")
+        #print("STAR EXPANSION BEGIN")
         """ local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
         
         local_complementation(q_ent_alice, [q_ent_charlie, q_ent_david])
