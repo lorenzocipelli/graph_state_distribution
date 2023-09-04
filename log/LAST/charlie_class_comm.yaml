@@ -6,7 +6,7 @@
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-04 11:07:25.061824'
+  WCT: '2023-09-04 15:18:53.578812'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_charlie.py
   HLN: 30
   INS: RECV
@@ -15,4 +15,4 @@
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-04 11:07:25.937574'
+  WCT: '2023-09-04 15:18:54.203710'

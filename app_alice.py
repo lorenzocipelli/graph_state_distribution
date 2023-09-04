@@ -1,10 +1,8 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion, local_edge_addition, remove_a0_local_edges, local_complementation, vertex_deletion, y_measurement
 
 def ghz_state_distribution():
     ''' iterate star_expansion() until star graph state is done ''' 
-
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
     # lists containing classical and EPR sockets with non-center nodes
