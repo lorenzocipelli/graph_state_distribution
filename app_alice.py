@@ -23,7 +23,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
         #m_bob = q_ent_bob.measure()
         alice.flush()
-
+        
         # Print the outcome
         #print(f"alice's outcome with Bob is: {m_bob}")
 

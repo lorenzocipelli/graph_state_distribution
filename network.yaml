@@ -117,6 +117,9 @@ nodes:
   - id: 0
     t1: 0
     t2: 0
+  - id: 1
+    t1: 0
+    t2: 0
 - gate_fidelity: 1.0
   name: "erin"
   qubits:
@@ -148,6 +151,9 @@ nodes:
   - id: 2
     t1: 0
     t2: 0
+  - id: 3
+    t1: 0
+    t2: 0
 - gate_fidelity: 1.0
   name: "bob"
   qubits:
@@ -161,5 +167,11 @@ nodes:
   name: "alice"
   qubits:
   - id: 0
+    t1: 0
+    t2: 0
+  - id: 1
+    t1: 0
+    t2: 0
+  - id: 2
     t1: 0
     t2: 0

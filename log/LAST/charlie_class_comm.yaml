@@ -1,0 +1,18 @@
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_charlie.py
+  HLN: 30
+  INS: WAIT_RECV
+  LOG: Waiting for a classical message from erin...
+  MSG: null
+  REC: charlie
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-04 11:07:25.061824'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_charlie.py
+  HLN: 30
+  INS: RECV
+  LOG: 'Message received from erin: go'
+  MSG: go
+  REC: charlie
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-04 11:07:25.937574'

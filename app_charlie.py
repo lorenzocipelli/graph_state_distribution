@@ -6,6 +6,8 @@ from star_expansion import star_expansion, local_edge_addition, remove_a0_local_
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
     epr_sock = {}
+    erin_sock = Socket("charlie", "erin", log_config=app_config.log_config)
+
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -23,13 +25,14 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_erin.H()
         q_ent_david = epr_sock["david"].recv_keep()[0]
         q_ent_david.H()
-        charlie.flush()
-        #aggiungo alice ma non so se è necessario: in teoria è già connessa tramite la star expansion eseguita in erin
         
-        #print("charlie star expansion start")
-        #star_expansion(q_ent_erin, [q_ent_bob, q_ent_david], belongs_W)
-        #charlie.flush()
-        #print("charlie star expansion end")
+        # attendo che erin abbia finito il suo star expansion
+        erin_sock.recv() # sincronizzazione forzata
+
+        print("charlie star expansion start")
+        star_expansion(q_ent_erin, [q_ent_bob, q_ent_david], belongs_W)
+        print("charlie star expansion end")
+        charlie.flush()
 
     # Print the outcome
     #print(f"charlie's outcome with Bob is: {m}")
