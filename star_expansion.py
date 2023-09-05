@@ -6,9 +6,9 @@ def y_measurement(qubits) :
         (rimane solamente il sottografo conseguenza della LC)
     """
     for q in qubits :
-        q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
-        q.H()
-        q.measure() # Y-basis measurement
+        # q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
+        # q.H()
+        q.measure(basis=1, inplace=False) # Y-basis measurement
 
 def vertex_deletion(a_0_qubit):
     """
@@ -16,9 +16,9 @@ def vertex_deletion(a_0_qubit):
         all'insieme W. Ottenuto attraverso misurazione del qubit a_0 
         nella base Z (base computazionale)
     """
-    a_0_qubit.measure()
+    a_0_qubit.measure(basis=2, inplace=False) # Z-basis measurement
 
-def local_complementation(a_0_qubit, c_i_qubits):
+def local_complementation(a_0_qubit, c_i_qubits, center_socket):
     """
         al qubit a_0 (entangled con il futuro centro stella) 
         viene applicata una rotazione rispetto all'asse X di -pi/4; 
@@ -26,6 +26,7 @@ def local_complementation(a_0_qubit, c_i_qubits):
         viene applicata una rotazione rispetto all'asse Z di pi/4
     """
     a_0_qubit.rot_X(3,2) # 3pi/4 == -pi/4
+    center_socket.send("test")
     for c_i in c_i_qubits :
         c_i.rot_Z(1,2) # pi/4
 
@@ -54,14 +55,14 @@ def local_edge_addition(local_qubits):
             #     "\nQubit " + str(x) + " cphase with " + str(x+y+1)) # debug
             local_qubits[x].cphase(local_qubits[x+y+1])
 
-def star_expansion(a_0_qubit, c_i_qubits, belongs_W):
+def star_expansion(a_0_qubit, c_i_qubits, belongs_W, center_classical_socket):
     ''' local_complementation()
         vertex_deletion() OR edge_addition()
         y_measurement
     '''
     local_qubits = [a_0_qubit] + c_i_qubits # concat
     local_edge_addition(local_qubits)
-    local_complementation(a_0_qubit, c_i_qubits)
+    local_complementation(a_0_qubit, c_i_qubits, center_classical_socket)
     if belongs_W:
         remove_a0_local_edges(a_0_qubit, c_i_qubits)
     else:

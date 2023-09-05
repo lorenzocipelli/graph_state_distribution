@@ -1,9 +1,18 @@
-- HFL: /home/cipelli/Desktop/graph_state_distribution/app_erin.py
-  HLN: 34
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 29
   INS: SEND
-  LOG: 'Send classical message to charlie: go'
-  MSG: go
+  LOG: 'Send classical message to alice: test'
+  MSG: test
+  REC: alice
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-05 10:54:35.751212'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_erin.py
+  HLN: 35
+  INS: SEND
+  LOG: 'Send classical message to charlie: go1'
+  MSG: go1
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-04 15:18:54.193094'
+  WCT: '2023-09-05 10:54:36.430788'

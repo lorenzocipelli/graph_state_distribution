@@ -1,10 +1,10 @@
-from star_expansion import star_expansion, local_edge_addition, remove_a0_local_edges, local_complementation, vertex_deletion, y_measurement
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-
+from star_expansion import star_expansion
 
 def main(app_config=None, belongs_W=True, other_nodes = []):
     epr_sock = {}
+    #charlie_sock = Socket("bob", "charlie", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -14,33 +14,21 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         log_config=app_config.log_config,
         epr_sockets=list(epr_sock.values()),
     )
-    with bob:
-        # Create an entangled pair using the EPR socket to alice
-        
+    with bob:      
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
-        bob.flush()
         
         q_ent_frank = epr_sock["frank"].create_keep()[0]
         q_ent_frank.H()
-        bob.flush()
-        
-        #print("STAR EXPANSION BEGIN")
-        """ local_edge_addition([q_ent_alice, q_ent_charlie, q_ent_david])
-        
-        local_complementation(q_ent_alice, [q_ent_charlie, q_ent_david])
-        
-        if belongs_W :
-            remove_a0_local_edges(q_ent_alice, [q_ent_charlie, q_ent_david])
-        else : 
-            vertex_deletion(q_ent_alice)
-        
-        y_measurement([q_ent_charlie, q_ent_david]) """
-        #star_expansion(q_ent_alice, [q_ent_charlie, q_ent_frank], belongs_W)
 
-        #print("STAR EXPANSION END")
-        
-        bob.flush()
+        # attendo che charlie abbia finito il suo star expansion
+        """ charlie_sock.recv() # sincronizzazione forzata
+
+        print("bob star expansion start")
+        star_expansion(q_ent_charlie, [q_ent_frank], belongs_W)
+        print("bob star expansion end") """
+
+        #bob.flush()
 
         '''
             ## VECCHIO CODICE (senza funzioni) ##

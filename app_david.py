@@ -15,9 +15,9 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         epr_sockets=list(epr_sock.values()),
     )
     with david:
-        # Receive an entangled pair using the EPR socket to bob
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
-        david.flush()
+        q_ent_charlie.H()
+
     # Print the outcome
     #print(f"david's outcome with Bob is: {m}")
 
