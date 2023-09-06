@@ -1,3 +1,6 @@
+from netqasm.sdk.external import Socket
+from netqasm.sdk import Qubit
+
 def y_measurement(qubits) :
     """
         misurazione rispetto alla base Y su un nodo che corrisponde
@@ -9,6 +12,8 @@ def y_measurement(qubits) :
         # q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
         # q.H()
         q.measure(basis=1, inplace=False) # Y-basis measurement
+    
+    return qubits
 
 def vertex_deletion(a_0_qubit):
     """
@@ -17,6 +22,7 @@ def vertex_deletion(a_0_qubit):
         nella base Z (base computazionale)
     """
     a_0_qubit.measure(basis=2, inplace=False) # Z-basis measurement
+    return a_0_qubit
 
 def local_complementation(a_0_qubit, c_i_qubits, center_socket):
     """
@@ -26,9 +32,11 @@ def local_complementation(a_0_qubit, c_i_qubits, center_socket):
         viene applicata una rotazione rispetto all'asse Z di pi/4
     """
     a_0_qubit.rot_X(3,2) # 3pi/4 == -pi/4
-    center_socket.send("test")
+    center_socket.send("rot_Z")
     for c_i in c_i_qubits :
         c_i.rot_Z(1,2) # pi/4
+
+    return a_0_qubit, c_i_qubits
 
 def remove_a0_local_edges(a_0_qubit, c_i_qubits):
     """
@@ -37,6 +45,8 @@ def remove_a0_local_edges(a_0_qubit, c_i_qubits):
     """
     for c_i in c_i_qubits :
         a_0_qubit.cphase(c_i)
+
+    return a_0_qubit, c_i_qubits
 
 def local_edge_addition(local_qubits):
     """
@@ -55,19 +65,22 @@ def local_edge_addition(local_qubits):
             #     "\nQubit " + str(x) + " cphase with " + str(x+y+1)) # debug
             local_qubits[x].cphase(local_qubits[x+y+1])
 
-def star_expansion(a_0_qubit, c_i_qubits, belongs_W, center_classical_socket):
-    ''' local_complementation()
-        vertex_deletion() OR edge_addition()
-        y_measurement
+    return local_qubits[0], local_qubits[1:]
+
+def star_expansion(a_0_qubit: Qubit, c_i_qubits: list[Qubit], belongs_W: bool, center_classic_socket: Socket):
+    ''' 1) local_complementation()\n
+        2) vertex_deletion() OR edge_addition()\n
+        3) y_measurement
     '''
-    local_qubits = [a_0_qubit] + c_i_qubits # concat
-    local_edge_addition(local_qubits)
-    local_complementation(a_0_qubit, c_i_qubits, center_classical_socket)
+    a_0_qubit, c_i_qubits = local_edge_addition([a_0_qubit] + c_i_qubits)
+    a_0_qubit, c_i_qubits = local_complementation(a_0_qubit, c_i_qubits, center_classic_socket)
     if belongs_W:
-        remove_a0_local_edges(a_0_qubit, c_i_qubits)
+        a_0_qubit, c_i_qubits = remove_a0_local_edges(a_0_qubit, c_i_qubits)
     else:
-        vertex_deletion(a_0_qubit)
-    y_measurement(c_i_qubits)
+        a_0_qubit = vertex_deletion(a_0_qubit)
+    c_i_qubits = y_measurement(c_i_qubits)
+
+    return a_0_qubit, c_i_qubits
 
 
 

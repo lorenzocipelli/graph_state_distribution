@@ -1,36 +1,36 @@
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 23
+  HLN: 25
   INS: WAIT_RECV
   LOG: Waiting for a classical message from erin...
   MSG: null
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-05 10:54:35.895354'
+  WCT: '2023-09-06 09:38:17.214804'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 23
+  HLN: 25
   INS: RECV
   LOG: 'Message received from erin: test'
   MSG: test
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-05 10:54:35.895391'
+  WCT: '2023-09-06 09:38:17.214902'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 28
+  HLN: 29
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-05 10:54:36.112293'
+  WCT: '2023-09-06 09:38:17.215003'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 28
+  HLN: 29
   INS: RECV
   LOG: 'Message received from charlie: test'
   MSG: test
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-05 10:54:36.492886'
+  WCT: '2023-09-06 09:38:17.555662'

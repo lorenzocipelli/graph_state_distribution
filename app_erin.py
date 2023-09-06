@@ -28,7 +28,10 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_gary.H()
 
         print("erin star expansion start")
-        star_expansion(q_ent_alice, [q_ent_charlie, q_ent_gary], belongs_W, alice_sock)
+        q_ent_alice, [q_ent_charlie, q_ent_gary] = star_expansion(a_0_qubit=q_ent_alice,
+                                                                  c_i_qubits=[q_ent_charlie, q_ent_gary],
+                                                                  belongs_W=belongs_W, 
+                                                                  center_classic_socket=alice_sock)
         print("erin star expansion end")
         
         erin.flush()

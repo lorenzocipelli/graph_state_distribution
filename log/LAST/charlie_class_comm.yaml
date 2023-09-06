@@ -6,7 +6,7 @@
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-05 10:54:35.484928'
+  WCT: '2023-09-06 09:38:16.541975'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_charlie.py
   HLN: 31
   INS: RECV
@@ -15,13 +15,13 @@
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-05 10:54:36.484155'
+  WCT: '2023-09-06 09:38:17.522566'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 29
+  HLN: 32
   INS: SEND
   LOG: 'Send classical message to alice: test'
   MSG: test
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-05 10:54:36.484260'
+  WCT: '2023-09-06 09:38:17.522857'

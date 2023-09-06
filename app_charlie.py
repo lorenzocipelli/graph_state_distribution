@@ -31,7 +31,10 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         erin_sock.recv() # sincronizzazione forzata
 
         print("charlie star expansion start")
-        star_expansion(q_ent_erin, [q_ent_bob, q_ent_david], belongs_W, alice_sock)
+        q_ent_erin, [q_ent_bob, q_ent_david] = star_expansion(a_0_qubit=q_ent_erin,
+                                                              c_i_qubits=[q_ent_bob, q_ent_david],
+                                                              belongs_W=belongs_W, 
+                                                              center_classic_socket=alice_sock)
         print("charlie star expansion end")
         
         #bob_sock.send("go2")

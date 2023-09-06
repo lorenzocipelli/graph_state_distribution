@@ -11,9 +11,9 @@
   QID:
   - 0
   - 0
-  SIT: 8167.0
+  SIT: 6886.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.284058'
+  WCT: '2023-09-06 09:38:16.240971'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between charlie and bob
@@ -24,7 +24,7 @@
   PTH:
   - ch18
   QGR:
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -35,9 +35,9 @@
   QID:
   - 0
   - 0
-  SIT: 9167.0
+  SIT: 7886.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.363456'
+  WCT: '2023-09-06 09:38:16.387263'
 - BAS: null
   INS: epr_EntanglementStage.START
   LOG: start entanglement creation between frank and bob
@@ -48,7 +48,7 @@
   PTH:
   - ch4
   QGR:
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -59,9 +59,9 @@
   QID:
   - 0
   - 1
-  SIT: 11167.0
+  SIT: 9886.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.365664'
+  WCT: '2023-09-06 09:38:16.403662'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between frank and bob
@@ -72,7 +72,7 @@
   PTH:
   - ch4
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -80,7 +80,7 @@
       - - frank
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -91,9 +91,9 @@
   QID:
   - 0
   - 1
-  SIT: 12167.0
+  SIT: 10886.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.370604'
+  WCT: '2023-09-06 09:38:16.409439'
 - BAS: null
   INS: epr_EntanglementStage.START
   LOG: start entanglement creation between david and charlie
@@ -104,7 +104,7 @@
   PTH:
   - ch15
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -112,7 +112,7 @@
       - - frank
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -123,9 +123,9 @@
   QID:
   - 0
   - 1
-  SIT: 14466.0
+  SIT: 13168.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.600128'
+  WCT: '2023-09-06 09:38:16.824701'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between david and charlie
@@ -136,7 +136,7 @@
   PTH:
   - ch15
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -144,7 +144,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -152,7 +152,7 @@
       - - david
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -163,9 +163,9 @@
   QID:
   - 0
   - 1
-  SIT: 15466.0
+  SIT: 14168.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.602337'
+  WCT: '2023-09-06 09:38:16.829044'
 - BAS: null
   INS: epr_EntanglementStage.START
   LOG: start entanglement creation between erin and charlie
@@ -176,7 +176,7 @@
   PTH:
   - ch12
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -184,7 +184,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -192,7 +192,7 @@
       - - david
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -203,9 +203,9 @@
   QID:
   - 0
   - 2
-  SIT: 17701.0
+  SIT: 16272.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.826643'
+  WCT: '2023-09-06 09:38:16.923735'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between erin and charlie
@@ -216,7 +216,7 @@
   PTH:
   - ch12
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -224,7 +224,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -232,7 +232,7 @@
       - - david
         - 0
       state: null
-    8769287272982:
+    8728824933845:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -240,7 +240,7 @@
       - - erin
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -251,9 +251,9 @@
   QID:
   - 0
   - 2
-  SIT: 18701.0
+  SIT: 17272.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.828724'
+  WCT: '2023-09-06 09:38:16.930847'
 - BAS: null
   INS: epr_EntanglementStage.START
   LOG: start entanglement creation between erin and alice
@@ -264,7 +264,7 @@
   PTH:
   - ch14
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -272,7 +272,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -280,7 +280,7 @@
       - - david
         - 0
       state: null
-    8769287272982:
+    8728824933845:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -288,7 +288,7 @@
       - - erin
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -299,9 +299,9 @@
   QID:
   - 1
   - 0
-  SIT: 20701.0
+  SIT: 19272.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.832510'
+  WCT: '2023-09-06 09:38:16.945752'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between erin and alice
@@ -312,7 +312,7 @@
   PTH:
   - ch14
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -320,7 +320,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -328,7 +328,7 @@
       - - david
         - 0
       state: null
-    8769287272982:
+    8728824933845:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -336,7 +336,7 @@
       - - erin
         - 0
       state: null
-    8769287273037:
+    8728824933905:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -344,7 +344,7 @@
       - - erin
         - 1
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -355,9 +355,9 @@
   QID:
   - 1
   - 0
-  SIT: 21701.0
+  SIT: 20272.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.834666'
+  WCT: '2023-09-06 09:38:16.961751'
 - BAS: null
   INS: epr_EntanglementStage.START
   LOG: start entanglement creation between gary and erin
@@ -368,7 +368,7 @@
   PTH:
   - ch6
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -376,7 +376,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -384,7 +384,7 @@
       - - david
         - 0
       state: null
-    8769287272982:
+    8728824933845:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -392,7 +392,7 @@
       - - erin
         - 0
       state: null
-    8769287273037:
+    8728824933905:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -400,7 +400,7 @@
       - - erin
         - 1
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -411,9 +411,9 @@
   QID:
   - 0
   - 2
-  SIT: 23701.0
+  SIT: 22272.0
   TYP: null
-  WCT: '2023-09-05 10:54:35.838389'
+  WCT: '2023-09-06 09:38:17.106000'
 - BAS: null
   INS: epr_EntanglementStage.FINISH
   LOG: entanglement of type 0 created between gary and erin
@@ -424,7 +424,7 @@
   PTH:
   - ch6
   QGR:
-    8769287272667:
+    8728824933545:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -432,7 +432,7 @@
       - - frank
         - 0
       state: null
-    8769287272797:
+    8728824933645:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -440,7 +440,7 @@
       - - david
         - 0
       state: null
-    8769287272982:
+    8728824933845:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -448,7 +448,7 @@
       - - erin
         - 0
       state: null
-    8769287273037:
+    8728824933905:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -456,7 +456,7 @@
       - - erin
         - 1
       state: null
-    8769287273082:
+    8728826605737:
       is_entangled: true
       qubit_ids:
       - - erin
@@ -464,7 +464,7 @@
       - - gary
         - 0
       state: null
-    8769288944440:
+    8728826606322:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -475,6 +475,6 @@
   QID:
   - 0
   - 2
-  SIT: 24701.0
+  SIT: 23272.0
   TYP: epr_EntanglementType.CK
-  WCT: '2023-09-05 10:54:35.840687'
+  WCT: '2023-09-06 09:38:17.161854'
