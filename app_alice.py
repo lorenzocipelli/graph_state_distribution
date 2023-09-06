@@ -22,12 +22,16 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
 
         alice.flush()
 
-        erin_sock.recv()
         #print("Remote Node which alice is connected to -> " + q_ent_erin.remote_entangled_node)
+        erin_sock.recv()
         q_ent_erin.rot_Z(1,2)
+        erin_sock.send("done_rot_Z")
+
+        alice.flush()
 
         charlie_sock.recv()
         q_ent_erin.rot_Z(1,2)
+        charlie_sock.send("done_rot_Z")
         
         # Print the outcome
         #print(f"alice's outcome with Bob is: {m_bob}")

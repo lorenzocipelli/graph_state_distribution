@@ -1,7 +1,7 @@
-from netqasm.sdk.external import Socket
+from netqasm.sdk.external import Socket, NetQASMConnection
 from netqasm.sdk import Qubit
 
-def y_measurement(qubits) :
+def y_measurement(qubits: list[Qubit]) :
     """
         misurazione rispetto alla base Y su un nodo che corrisponde
         graficamente alla complementazione locale su qual nodo con 
@@ -11,11 +11,12 @@ def y_measurement(qubits) :
     for q in qubits :
         # q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
         # q.H()
+        # q.measure()
         q.measure(basis=1, inplace=False) # Y-basis measurement
     
     return qubits
 
-def vertex_deletion(a_0_qubit):
+def vertex_deletion(a_0_qubit: Qubit):
     """
         rimozione del qubit a_0 nel caso di non appartenenza del nodo
         all'insieme W. Ottenuto attraverso misurazione del qubit a_0 
@@ -24,7 +25,7 @@ def vertex_deletion(a_0_qubit):
     a_0_qubit.measure(basis=2, inplace=False) # Z-basis measurement
     return a_0_qubit
 
-def local_complementation(a_0_qubit, c_i_qubits, center_socket):
+def local_complementation(a_0_qubit: Qubit, c_i_qubits: list[Qubit], center_socket: Socket, conn: NetQASMConnection):
     """
         al qubit a_0 (entangled con il futuro centro stella) 
         viene applicata una rotazione rispetto all'asse X di -pi/4; 
@@ -36,9 +37,11 @@ def local_complementation(a_0_qubit, c_i_qubits, center_socket):
     for c_i in c_i_qubits :
         c_i.rot_Z(1,2) # pi/4
 
+    conn.flush() # per poter ricevere il messaggio successivo [sincronizzazione]
+    center_socket.recv() # sincronizzazione
     return a_0_qubit, c_i_qubits
 
-def remove_a0_local_edges(a_0_qubit, c_i_qubits):
+def remove_a0_local_edges(a_0_qubit: Qubit, c_i_qubits: list[Qubit]):
     """
         rimozione dell'entanglement fra il qubit a_0 e tutti gli altri
         qubit presenti all'interno del nodo: attraverso gate CZ
@@ -48,7 +51,7 @@ def remove_a0_local_edges(a_0_qubit, c_i_qubits):
 
     return a_0_qubit, c_i_qubits
 
-def local_edge_addition(local_qubits):
+def local_edge_addition(local_qubits: list[Qubit]):
     """
         tutti i qubits a_i, i>=0 di A (nodo) sono linkati utilizzato CZ tra
         tutte le possibili coppie. La funzione effettua esattamente
@@ -67,13 +70,13 @@ def local_edge_addition(local_qubits):
 
     return local_qubits[0], local_qubits[1:]
 
-def star_expansion(a_0_qubit: Qubit, c_i_qubits: list[Qubit], belongs_W: bool, center_classic_socket: Socket):
+def star_expansion(a_0_qubit: Qubit, c_i_qubits: list[Qubit], belongs_W: bool, center_classic_socket: Socket, conn: NetQASMConnection):
     ''' 1) local_complementation()\n
         2) vertex_deletion() OR edge_addition()\n
         3) y_measurement
     '''
     a_0_qubit, c_i_qubits = local_edge_addition([a_0_qubit] + c_i_qubits)
-    a_0_qubit, c_i_qubits = local_complementation(a_0_qubit, c_i_qubits, center_classic_socket)
+    a_0_qubit, c_i_qubits = local_complementation(a_0_qubit, c_i_qubits, center_classic_socket, conn)
     if belongs_W:
         a_0_qubit, c_i_qubits = remove_a0_local_edges(a_0_qubit, c_i_qubits)
     else:
