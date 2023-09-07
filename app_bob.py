@@ -4,8 +4,8 @@ from star_expansion import star_expansion
 
 def main(app_config=None, belongs_W=True, other_nodes = []):
     epr_sock = {}
+    #alice_sock = Socket("bob", "alice", log_config=app_config.log_config)
     #charlie_sock = Socket("bob", "charlie", log_config=app_config.log_config)
-
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
 
@@ -24,9 +24,9 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         # attendo che charlie abbia finito il suo star expansion
         """ charlie_sock.recv() # sincronizzazione forzata
 
-        print("bob star expansion start")
-        star_expansion(q_ent_charlie, [q_ent_frank], belongs_W)
-        print("bob star expansion end") """
+        print("Bob: star expansion start")
+        star_expansion(q_ent_charlie, [q_ent_frank], belongs_W, alice_sock, bob)
+        print("Bob: star expansion end") """
 
         #bob.flush()
 

@@ -9,10 +9,9 @@ def y_measurement(qubits: list[Qubit]) :
         (rimane solamente il sottografo conseguenza della LC)
     """
     for q in qubits :
-        # q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
-        # q.H()
-        # q.measure()
-        q.measure(basis=1, inplace=False) # Y-basis measurement
+        q.rot_Z(3,1) # S^dagger, 3pi/2 == -pi/2
+        q.H()
+        q.measure() # Y-basis measurement
     
     return qubits
 
@@ -22,7 +21,7 @@ def vertex_deletion(a_0_qubit: Qubit):
         all'insieme W. Ottenuto attraverso misurazione del qubit a_0 
         nella base Z (base computazionale)
     """
-    a_0_qubit.measure(basis=2, inplace=False) # Z-basis measurement
+    a_0_qubit.measure() # Z-basis measurement
     return a_0_qubit
 
 def local_complementation(a_0_qubit: Qubit, c_i_qubits: list[Qubit], center_socket: Socket, conn: NetQASMConnection):

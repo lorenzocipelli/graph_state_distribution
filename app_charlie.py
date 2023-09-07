@@ -8,6 +8,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     epr_sock = {}
     erin_sock = Socket("charlie", "erin", log_config=app_config.log_config)
     alice_sock = Socket("charlie", "alice", log_config=app_config.log_config)
+    #bob_sock = Socket("charlie", "bob", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -37,7 +38,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
                                                               center_classic_socket=alice_sock,
                                                               conn=charlie)
         print("Charlie: star expansion end")
-        
+        charlie.flush()
         #bob_sock.send("go2")
         
 
