@@ -18,6 +18,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_bob = epr_sock["bob"].recv_keep()[0]
         q_ent_bob.H()
 
+        frank.flush()
+
     # Print the outcome
     #print(f"frank's outcome with Bob is: {m}")
 

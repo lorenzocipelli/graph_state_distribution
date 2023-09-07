@@ -6,7 +6,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-07 14:42:12.323623'
+  WCT: '2023-09-07 14:34:53.904045'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
   HLN: 26
   INS: RECV
@@ -15,7 +15,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-07 14:42:12.570614'
+  WCT: '2023-09-07 14:34:54.152979'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
   HLN: 29
   INS: SEND
@@ -24,7 +24,7 @@
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-07 14:42:12.602891'
+  WCT: '2023-09-07 14:34:54.193473'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
   HLN: 31
   INS: WAIT_RECV
@@ -33,7 +33,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-07 14:42:12.603127'
+  WCT: '2023-09-07 14:34:54.193763'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
   HLN: 31
   INS: RECV
@@ -42,7 +42,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-07 14:42:13.479250'
+  WCT: '2023-09-07 14:34:55.401756'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
   HLN: 34
   INS: SEND
@@ -51,4 +51,4 @@
   REC: charlie
   SEN: alice
   SOD: 0
-  WCT: '2023-09-07 14:42:14.727969'
+  WCT: '2023-09-07 14:34:56.148955'

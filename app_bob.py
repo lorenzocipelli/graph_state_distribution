@@ -21,6 +21,8 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         q_ent_frank = epr_sock["frank"].create_keep()[0]
         q_ent_frank.H()
 
+        bob.flush()
+
         # attendo che charlie abbia finito il suo star expansion
         """ charlie_sock.recv() # sincronizzazione forzata
 

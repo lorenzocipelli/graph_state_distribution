@@ -7,9 +7,9 @@
   OPR:
   - Q0=0
   OUT: null
-  PRC: 43
+  PRC: 40
   QGR:
-    8773218795265:
+    8730767187673:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -17,15 +17,33 @@
       - - charlie
         - 0
       state: null
-    8773218832583:
+  QID:
+  - 0
+  SID: 0
+  SIT: 6963.0
+  VID:
+  - 0
+  WCT: '2023-09-07 14:34:53.061888'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: h
+  LOG: Doing instruction h with operands ['Q0=1']
+  OPR:
+  - Q0=1
+  OUT: null
+  PRC: 51
+  QGR:
+    8730767187673:
       is_entangled: true
       qubit_ids:
+      - - bob
+        - 0
       - - charlie
-        - 1
-      - - david
         - 0
       state: null
-    8773218833018:
+    8730767222913:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -33,18 +51,10 @@
       - - frank
         - 0
       state: null
-    8773218847679:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 2
-      - - erin
-        - 0
-      state: null
   QID:
-  - 0
+  - 1
   SID: 0
-  SIT: 27773.0
+  SIT: 9963.0
   VID:
-  - 0
-  WCT: '2023-09-07 14:42:12.208232'
+  - 1
+  WCT: '2023-09-07 14:34:53.116073'

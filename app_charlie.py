@@ -28,6 +28,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_david = epr_sock["david"].recv_keep()[0]
         q_ent_david.H()
         
+        charlie.flush()
+
         # attendo che erin abbia finito il suo star expansion
         erin_sock.recv() # sincronizzazione forzata
         

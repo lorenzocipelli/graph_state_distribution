@@ -27,6 +27,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_gary = epr_sock["gary"].create_keep()[0]
         q_ent_gary.H()
 
+        erin.flush()
+
         print("Erin: star expansion start")
         q_ent_alice, [q_ent_charlie, q_ent_gary] = star_expansion(a_0_qubit=q_ent_alice,
                                                                   c_i_qubits=[q_ent_charlie, q_ent_gary],

@@ -9,15 +9,15 @@
   OUT: null
   PRC: 25
   QGR:
-    8758927576183:
+    8773218795265:
       is_entangled: true
       qubit_ids:
       - - bob
-        - 1
-      - - frank
+        - 0
+      - - charlie
         - 0
       state: null
-    8758927576348:
+    8773218832583:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -25,18 +25,18 @@
       - - david
         - 0
       state: null
-    8758928427402:
+    8773218833018:
       is_entangled: true
       qubit_ids:
       - - bob
-        - 0
-      - - charlie
+        - 1
+      - - frank
         - 0
       state: null
   QID:
   - 0
   SID: 0
-  SIT: 14919.0
+  SIT: 9773.0
   VID:
   - 0
-  WCT: '2023-09-07 10:06:49.124312'
+  WCT: '2023-09-07 14:42:11.693055'

@@ -25,12 +25,12 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         #print("Remote Node which alice is connected to -> " + q_ent_erin.remote_entangled_node)
         erin_sock.recv()
         q_ent_erin.rot_Z(1,2)
-        erin_sock.send("done_rot_Z")
-
         alice.flush()
+        erin_sock.send("done_rot_Z")
 
         charlie_sock.recv()
         q_ent_erin.rot_Z(1,2)
+        alice.flush()
         charlie_sock.send("done_rot_Z")
         
         # Print the outcome
