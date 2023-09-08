@@ -2,11 +2,12 @@ from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
-    # lists containing classical and EPR sockets with non-center nodes
+
     epr_sock = {}
+
     erin_sock = Socket("alice", "erin", log_config=app_config.log_config)
     charlie_sock = Socket("alice", "charlie", log_config=app_config.log_config)
-    #bob_sock = Socket("alice", "bob", log_config=app_config.log_config)
+    bob_sock = Socket("alice", "bob", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -22,19 +23,36 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
 
         alice.flush()
 
-        #print("Remote Node which alice is connected to -> " + q_ent_erin.remote_entangled_node)
-        erin_sock.recv()
-        q_ent_erin.rot_Z(1,2)
-        alice.flush()
-        erin_sock.send("done_rot_Z")
+        """ 
+            questi tre blocchi di codice successivi servono allo Star Expansion corrispettivo di:
+            Erin -> Charlie -> Bob
+            per poter effettuare le rotazioni sull'asse Z in maniera sincronizzata
+            vengono attivati dai codici di Local Complementation nello Star Expansion
+            se ne trovano 3 su Alice perchè Alice è il centro stella e quindi sicuramente
+            ad ogni iterazione dello SE dovrà effettuare rotazione Z sul proprio qubit
+            (che è remoto rispetto al nodo su cui effettivamente si sta effettuando lo SE,
+            per questo che è necessaria la sincronizzazione)
+        """
+        msg = erin_sock.recv()
+        while (msg == "rot_Z") :
+            q_ent_erin.rot_Z(1,2) # pi/4
+            alice.flush()
+            erin_sock.send("done_rot_Z")
+            msg = erin_sock.recv()
 
-        charlie_sock.recv()
-        q_ent_erin.rot_Z(1,2)
-        alice.flush()
-        charlie_sock.send("done_rot_Z")
-        
-        # Print the outcome
-        #print(f"alice's outcome with Bob is: {m_bob}")
+        msg = charlie_sock.recv()
+        while (msg == "rot_Z") :
+            q_ent_erin.rot_Z(1,2) # pi/4 (CORRETTO?)
+            alice.flush()
+            charlie_sock.send("done_rot_Z")
+            msg = charlie_sock.recv()
+
+        msg = bob_sock.recv()
+        while (msg == "rot_Z") :
+            q_ent_erin.rot_Z(1,2) # pi/4 (CORRETTO?)
+            alice.flush()
+            bob_sock.send("done_rot_Z")
+            msg = bob_sock.recv()
 
 if __name__ == "__main__":
     main()

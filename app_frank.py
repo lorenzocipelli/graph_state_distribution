@@ -5,6 +5,7 @@ from netqasm.sdk import EPRSocket
 def main(app_config=None, belongs_W=True, other_nodes=[]):
     
     epr_sock = {}
+    bob_sock = Socket("frank", "bob", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -20,11 +21,21 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
 
         frank.flush()
 
-    # Print the outcome
-    #print(f"frank's outcome with Bob is: {m}")
-
-    # Send the outcome to alice
-    #socket.send(str(m))
+        """ 
+            questo bloccho di codice serve allo Star Expansion corrispettivo di: Bob
+            per poter effettuare le rotazioni sull'asse Z in maniera sincronizzata
+            vengono attivati dai codici di Local Complementation nello Star Expansion
+            se ne trovano 1 su Frank perchè Frank è collegato con Bob e quindi sicuramente
+            per la sua iterazione dello SE dovrà effettuare rotazione Z sul proprio qubit
+            (che è remoto rispetto al nodo su cui effettivamente si sta effettuando lo SE,
+            per questo che è necessaria la sincronizzazione)
+        """
+        msg = bob_sock.recv()
+        while (msg == "rot_Z") :
+            q_ent_bob.rot_Z(1,2) # pi/4
+            frank.flush()
+            bob_sock.send("done_rot_Z")
+            msg = bob_sock.recv()
 
 if __name__ == "__main__":
     main()

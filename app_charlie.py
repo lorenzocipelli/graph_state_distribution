@@ -1,14 +1,16 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion
+from star_expansion import star_expansion, QubitSocket
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
     epr_sock = {}
+
+    david_sock = Socket("charlie", "david", log_config=app_config.log_config)
     erin_sock = Socket("charlie", "erin", log_config=app_config.log_config)
     alice_sock = Socket("charlie", "alice", log_config=app_config.log_config)
-    #bob_sock = Socket("charlie", "bob", log_config=app_config.log_config)
+    bob_sock = Socket("charlie", "bob", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -22,33 +24,43 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         q_ent_bob = epr_sock["bob"].recv_keep()[0]
         q_ent_bob.H()
 
-        q_ent_erin = epr_sock["erin"].recv_keep()[0]
-        q_ent_erin.H()
-
         q_ent_david = epr_sock["david"].recv_keep()[0]
         q_ent_david.H()
+
+        q_ent_erin = epr_sock["erin"].recv_keep()[0]
+        q_ent_erin.H()
         
         charlie.flush()
+
+        msg = erin_sock.recv()
+        while (msg == "rot_Z") :
+            q_ent_erin.rot_Z(1,2) # pi/4
+            charlie.flush()
+            erin_sock.send("done_rot_Z")
+            msg = erin_sock.recv()
 
         # attendo che erin abbia finito il suo star expansion
         erin_sock.recv() # sincronizzazione forzata
-        
+
+        q_ent_erin.H()
+
+        # creazione oggetti in vista dello Star Expansion
+        qs_bob = QubitSocket(local_qubit=q_ent_bob, classic_socket=bob_sock)
+        qs_david = QubitSocket(local_qubit=q_ent_david, classic_socket=david_sock)
+        # notare che la socket classica di Erin viene rimpiazzata con quella di Alice
+        # questo perché dopo il primo SE Charlie comunicherà direttamente con il centro
+        # stella, ovvero proprio con Alice
+        qs_erin = QubitSocket(local_qubit=q_ent_erin, classic_socket=alice_sock)
+
         print("Charlie: star expansion start")
-        q_ent_erin, [q_ent_bob, q_ent_david] = star_expansion(a_0_qubit=q_ent_erin,
-                                                              c_i_qubits=[q_ent_bob, q_ent_david],
-                                                              belongs_W=belongs_W, 
-                                                              center_classic_socket=alice_sock,
-                                                              conn=charlie)
+        star_expansion(a_0_qubit_socket=qs_erin,
+                        c_i_qubit_socket=[qs_bob, qs_david],
+                        belongs_W=belongs_W, 
+                        conn=charlie)
         print("Charlie: star expansion end")
         charlie.flush()
-        #bob_sock.send("go2")
-        
 
-    # Print the outcome
-    #print(f"charlie's outcome with Bob is: {m}")
-
-    # Send the outcome to alice
-    #socket.send(str(m))
+        bob_sock.send("go2") # per procedere con lo SE di Bob      
 
 if __name__ == "__main__":
     main()

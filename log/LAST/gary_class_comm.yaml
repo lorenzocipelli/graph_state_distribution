@@ -1,0 +1,45 @@
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_gary.py
+  HLN: 24
+  INS: WAIT_RECV
+  LOG: Waiting for a classical message from erin...
+  MSG: null
+  REC: gary
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-08 10:54:10.616188'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_gary.py
+  HLN: 24
+  INS: RECV
+  LOG: 'Message received from erin: rot_Z'
+  MSG: rot_Z
+  REC: gary
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-08 10:54:11.102101'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_gary.py
+  HLN: 28
+  INS: SEND
+  LOG: 'Send classical message to erin: done_rot_Z'
+  MSG: done_rot_Z
+  REC: erin
+  SEN: gary
+  SOD: 0
+  WCT: '2023-09-08 10:54:11.118689'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_gary.py
+  HLN: 29
+  INS: WAIT_RECV
+  LOG: Waiting for a classical message from erin...
+  MSG: null
+  REC: gary
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-08 10:54:11.118819'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_gary.py
+  HLN: 29
+  INS: RECV
+  LOG: 'Message received from erin: end'
+  MSG: end
+  REC: gary
+  SEN: erin
+  SOD: 0
+  WCT: '2023-09-08 10:54:11.484761'

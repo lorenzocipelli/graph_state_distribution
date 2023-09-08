@@ -1,0 +1,45 @@
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
+  HLN: 24
+  INS: WAIT_RECV
+  LOG: Waiting for a classical message from charlie...
+  MSG: null
+  REC: david
+  SEN: charlie
+  SOD: 0
+  WCT: '2023-09-08 10:54:10.101645'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
+  HLN: 24
+  INS: RECV
+  LOG: 'Message received from charlie: rot_Z'
+  MSG: rot_Z
+  REC: david
+  SEN: charlie
+  SOD: 0
+  WCT: '2023-09-08 10:54:13.767285'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
+  HLN: 28
+  INS: SEND
+  LOG: 'Send classical message to charlie: done_rot_Z'
+  MSG: done_rot_Z
+  REC: charlie
+  SEN: david
+  SOD: 0
+  WCT: '2023-09-08 10:54:13.946827'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
+  HLN: 29
+  INS: WAIT_RECV
+  LOG: Waiting for a classical message from charlie...
+  MSG: null
+  REC: david
+  SEN: charlie
+  SOD: 0
+  WCT: '2023-09-08 10:54:13.946938'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
+  HLN: 29
+  INS: RECV
+  LOG: 'Message received from charlie: end'
+  MSG: end
+  REC: david
+  SEN: charlie
+  SOD: 0
+  WCT: '2023-09-08 10:54:14.273864'
