@@ -1,45 +1,45 @@
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 24
+  HLN: 33
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-08 10:54:10.458622'
+  WCT: '2023-09-10 19:43:35.070080'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 24
+  HLN: 33
   INS: RECV
   LOG: 'Message received from bob: rot_Z'
   MSG: rot_Z
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-08 10:54:15.197832'
+  WCT: '2023-09-10 19:43:40.147640'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 28
+  HLN: 37
   INS: SEND
   LOG: 'Send classical message to bob: done_rot_Z'
   MSG: done_rot_Z
   REC: bob
   SEN: frank
   SOD: 0
-  WCT: '2023-09-08 10:54:15.333744'
+  WCT: '2023-09-10 19:43:40.189440'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 29
+  HLN: 38
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-08 10:54:15.333843'
+  WCT: '2023-09-10 19:43:40.189563'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 29
+  HLN: 38
   INS: RECV
   LOG: 'Message received from bob: end'
   MSG: end
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-08 10:54:15.692694'
+  WCT: '2023-09-10 19:43:40.464642'

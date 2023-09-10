@@ -1,5 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
+from star_expansion import star_expansion_neighbour
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
@@ -30,12 +31,9 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
             (che è remoto rispetto al nodo su cui effettivamente si sta effettuando lo SE,
             per questo che è necessaria la sincronizzazione)
         """
-        msg = charlie_sock.recv()
-        while (msg == "rot_Z") :
-            q_ent_charlie.rot_Z(1,2) # pi/4
-            david.flush()
-            charlie_sock.send("done_rot_Z")
-            msg = charlie_sock.recv()
+        star_expansion_neighbour(conn=david,
+                            communicating_socket=charlie_sock,
+                            qubit_to_rotate=q_ent_charlie)
 
     # Print the outcome
     #print(f"david's outcome with Bob is: {m}")

@@ -1,6 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion, QubitSocket
+from star_expansion import star_expansion, star_expansion_neighbour, QubitSocket
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
@@ -32,17 +32,12 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         
         charlie.flush()
 
-        msg = erin_sock.recv()
-        while (msg == "rot_Z") :
-            q_ent_erin.rot_Z(1,2) # pi/4
-            charlie.flush()
-            erin_sock.send("done_rot_Z")
-            msg = erin_sock.recv()
+        star_expansion_neighbour(conn=charlie,
+                            communicating_socket=erin_sock,
+                            qubit_to_rotate=q_ent_erin)
 
         # attendo che erin abbia finito il suo star expansion
         erin_sock.recv() # sincronizzazione forzata
-
-        q_ent_erin.H()
 
         # creazione oggetti in vista dello Star Expansion
         qs_bob = QubitSocket(local_qubit=q_ent_bob, classic_socket=bob_sock)

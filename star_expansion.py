@@ -7,10 +7,26 @@ class QubitSocket:
     self.classic_socket = classic_socket
 
 
+def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Socket, qubit_to_rotate: Qubit) :
+    """
+        Metodo da utilizzare ogni volta che su un nodo vicino avviene l'operazione di Star Expansion.
+        Questa funzione permette di effettuare sul qubit vicino (quello su cui viene chiamata la funzione) le
+        rotazioni necessarie per la riuscita corretta dei Local Complementation dell'SE (sia nell'LC sul qubit a_0
+        che quelli effettuati per la misurazione in base Y).\n
+        IMPORTANTE: ricordarsi di utilizzare OGNI volta che un nodo vicino sta effettuando lo Star Expansion
+    """
+    msg = communicating_socket.recv()
+    while (msg == "rot_Z") :
+        qubit_to_rotate.rot_Z(1,2) # pi/4
+        conn.flush()
+        communicating_socket.send("done_rot_Z")
+        msg = communicating_socket.recv()
+
+
 def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], conn: NetQASMConnection) :
     """
-        misurazione rispetto alla base Y su un nodo che corrisponde
-        graficamente alla complementazione locale su qual nodo con 
+        Misurazione rispetto alla base Y su un nodo che corrisponde
+        graficamente alla complementazione locale su quel nodo con 
         successiva eliminazione del nodo su cui essa è stata applicata
         (rimane solamente il sottografo conseguenza della LC)
     """
@@ -29,7 +45,7 @@ def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], c
         a_0_qubit.classic_socket.recv() # attendo l'avvenuta rotazione
 
     """ 
-        fermo le altre applicazioni dall'ascolto dei messaggi
+        fermo le altre applicazioni dall'ascolto dei messaggi, in dettaglio,
         questi send vanno a fermare quei while che ci sono all'interno
         delle applicazioni sui nodi che sono a contatto con il nodo su 
         cui si sta facendo star expansion
@@ -58,7 +74,7 @@ def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], c
 
 def vertex_deletion(a_0_qubit: QubitSocket, conn: NetQASMConnection):
     """
-        rimozione del qubit a_0 nel caso di non appartenenza del nodo
+        Rimozione del qubit a_0 nel caso di non appartenenza del nodo
         all'insieme W. Ottenuto attraverso misurazione del qubit a_0 
         nella base Z (base computazionale)
     """
@@ -68,7 +84,7 @@ def vertex_deletion(a_0_qubit: QubitSocket, conn: NetQASMConnection):
 
 def remove_a0_local_edges(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket], conn: NetQASMConnection):
     """
-        rimozione dell'entanglement fra il qubit a_0 e tutti gli altri
+        Rimozione dell'entanglement fra il qubit a_0 e tutti gli altri
         qubit presenti all'interno del nodo: attraverso gate CZ
     """
     for c_i in c_i_qubits :
@@ -79,7 +95,7 @@ def remove_a0_local_edges(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket],
 
 def local_complementation(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket], conn: NetQASMConnection):
     """
-        al qubit a_0 (entangled con il futuro centro stella) 
+        Al qubit a_0 (entangled con il futuro centro stella) 
         viene applicata una rotazione rispetto all'asse X di -pi/4; 
         mentre, ai nodi localmente entangled fra di loro (nodi c_i)
         viene applicata una rotazione rispetto all'asse Z di pi/4
@@ -95,7 +111,7 @@ def local_complementation(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket],
 
 def local_edge_addition(local_qubits: list[QubitSocket], conn: NetQASMConnection):
     """
-        tutti i qubits a_i, i>=0 di A (nodo) sono linkati utilizzato CZ tra
+        Tutti i qubits a_i, i>=0 di A (nodo) sono linkati utilizzato CZ tra
         tutte le possibili coppie. La funzione effettua esattamente
         [n*(n-1)]/2 passaggi
     """

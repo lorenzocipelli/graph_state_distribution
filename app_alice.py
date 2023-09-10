@@ -1,5 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
+from star_expansion import star_expansion_neighbour
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
@@ -33,26 +34,17 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
             (che è remoto rispetto al nodo su cui effettivamente si sta effettuando lo SE,
             per questo che è necessaria la sincronizzazione)
         """
-        msg = erin_sock.recv()
-        while (msg == "rot_Z") :
-            q_ent_erin.rot_Z(1,2) # pi/4
-            alice.flush()
-            erin_sock.send("done_rot_Z")
-            msg = erin_sock.recv()
+        star_expansion_neighbour(conn=alice,
+                            communicating_socket=erin_sock,
+                            qubit_to_rotate=q_ent_erin)
 
-        msg = charlie_sock.recv()
-        while (msg == "rot_Z") :
-            q_ent_erin.rot_Z(1,2) # pi/4 (CORRETTO?)
-            alice.flush()
-            charlie_sock.send("done_rot_Z")
-            msg = charlie_sock.recv()
+        star_expansion_neighbour(conn=alice,
+                            communicating_socket=charlie_sock,
+                            qubit_to_rotate=q_ent_erin)
 
-        msg = bob_sock.recv()
-        while (msg == "rot_Z") :
-            q_ent_erin.rot_Z(1,2) # pi/4 (CORRETTO?)
-            alice.flush()
-            bob_sock.send("done_rot_Z")
-            msg = bob_sock.recv()
+        star_expansion_neighbour(conn=alice,
+                            communicating_socket=bob_sock,
+                            qubit_to_rotate=q_ent_erin)
 
 if __name__ == "__main__":
     main()
