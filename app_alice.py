@@ -1,6 +1,9 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
-from netqasm.sdk import EPRSocket
+from netqasm.sdk import EPRSocket, Qubit
 from star_expansion import star_expansion_neighbour
+from netqasm.logging.glob import get_netqasm_logger
+
+logger = get_netqasm_logger()
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
@@ -19,7 +22,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         epr_sockets=list(epr_sock.values()),
     )
     with alice:
-        q_ent_erin = epr_sock["erin"].recv_keep()[0]
+        q_ent_erin : Qubit = epr_sock["erin"].recv_keep()[0]
         q_ent_erin.H()
 
         alice.flush()
@@ -45,6 +48,11 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         star_expansion_neighbour(conn=alice,
                             communicating_socket=bob_sock,
                             qubit_to_rotate=q_ent_erin)
+        
+        bob_sock.recv()
+        m_erin = q_ent_erin.measure()
+        
+    logger.info(f"alice:    m_erin:    {m_erin}")
 
 if __name__ == "__main__":
     main()

@@ -47,13 +47,10 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         # stella, ovvero proprio con Alice
         qs_erin = QubitSocket(local_qubit=q_ent_erin, classic_socket=alice_sock)
 
-        print("Charlie: star expansion start")
         star_expansion(a_0_qubit_socket=qs_erin,
                         c_i_qubit_socket=[qs_bob, qs_david],
                         belongs_W=belongs_W, 
                         conn=charlie)
-        print("Charlie: star expansion end")
-        charlie.flush()
 
         bob_sock.send("go2") # per procedere con lo SE di Bob      
 

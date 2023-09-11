@@ -35,13 +35,10 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=charlie_sock)
         qs_gary = QubitSocket(local_qubit=q_ent_gary, classic_socket=gary_sock)
 
-        print("Erin: star expansion start")
         star_expansion(a_0_qubit_socket=qs_alice,
                         c_i_qubit_socket=[qs_charlie, qs_gary],
                         belongs_W=belongs_W, 
                         conn=erin)
-        print("Erin: star expansion end")
-        erin.flush()
 
         charlie_sock.send("go1") # per procedere con lo SE di Charlie  
 

@@ -6,6 +6,7 @@ from star_expansion import star_expansion_neighbour
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
     epr_sock = {}
+    
     erin_sock = Socket("gary", "erin", log_config=app_config.log_config)
 
     for element in other_nodes:

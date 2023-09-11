@@ -9,7 +9,15 @@
   OUT: null
   PRC: 55
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -17,15 +25,7 @@
       - - frank
         - 0
       state: null
-    8741911309127:
-      is_entangled: true
-      qubit_ids:
-      - - alice
-        - 0
-      - - erin
-        - 0
-      state: null
-    8741911309187:
+    8744389994271:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -33,21 +33,21 @@
       - - david
         - 0
       state: null
-    8741916116837:
+    8744389994391:
       is_entangled: true
       qubit_ids:
-      - - bob
+      - - alice
         - 0
-      - - charlie
+      - - erin
         - 0
       state: null
   QID:
   - 0
   SID: 0
-  SIT: 212938.0
+  SIT: 151487.0
   VID:
   - 0
-  WCT: '2023-09-10 19:43:34.763865'
+  WCT: '2023-09-11 11:32:55.011637'
 - AID: 0
   ANG: null
   HFL: null
@@ -59,7 +59,15 @@
   OUT: null
   PRC: 66
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -67,15 +75,7 @@
       - - frank
         - 0
       state: null
-    8741911309127:
-      is_entangled: true
-      qubit_ids:
-      - - alice
-        - 0
-      - - erin
-        - 0
-      state: null
-    8741911309187:
+    8744389994271:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -83,7 +83,7 @@
       - - david
         - 0
       state: null
-    8741911309267:
+    8744389994381:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -91,21 +91,21 @@
       - - erin
         - 1
       state: null
-    8741916116837:
+    8744389994391:
       is_entangled: true
       qubit_ids:
-      - - bob
+      - - alice
         - 0
-      - - charlie
+      - - erin
         - 0
       state: null
   QID:
   - 1
   SID: 0
-  SIT: 215938.0
+  SIT: 154487.0
   VID:
   - 1
-  WCT: '2023-09-10 19:43:34.900234'
+  WCT: '2023-09-11 11:32:55.027777'
 - AID: 0
   ANG: null
   HFL: null
@@ -117,7 +117,15 @@
   OUT: null
   PRC: 77
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -125,7 +133,7 @@
       - - frank
         - 0
       state: null
-    8741911293322:
+    8744389979520:
       is_entangled: true
       qubit_ids:
       - - erin
@@ -133,15 +141,7 @@
       - - gary
         - 0
       state: null
-    8741911309127:
-      is_entangled: true
-      qubit_ids:
-      - - alice
-        - 0
-      - - erin
-        - 0
-      state: null
-    8741911309187:
+    8744389994271:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -149,7 +149,7 @@
       - - david
         - 0
       state: null
-    8741911309267:
+    8744389994381:
       is_entangled: true
       qubit_ids:
       - - charlie
@@ -157,21 +157,21 @@
       - - erin
         - 1
       state: null
-    8741916116837:
+    8744389994391:
       is_entangled: true
       qubit_ids:
-      - - bob
+      - - alice
         - 0
-      - - charlie
+      - - erin
         - 0
       state: null
   QID:
   - 2
   SID: 0
-  SIT: 218938.0
+  SIT: 157487.0
   VID:
   - 2
-  WCT: '2023-09-10 19:43:34.919316'
+  WCT: '2023-09-11 11:32:55.040568'
 - AID: 0
   ANG: null
   HFL: null
@@ -184,7 +184,15 @@
   OUT: null
   PRC: 2
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -192,7 +200,7 @@
       - - frank
         - 0
       state: null
-    8741911293322:
+    8744389979520:
       is_entangled: true
       qubit_ids:
       - - erin
@@ -200,7 +208,15 @@
       - - gary
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -212,31 +228,15 @@
       - - erin
         - 1
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 0
   - 1
   SID: 1
-  SIT: 718978.0
+  SIT: 657559.0
   VID:
   - 0
   - 1
-  WCT: '2023-09-10 19:43:34.950613'
+  WCT: '2023-09-11 11:32:55.154516'
 - AID: 0
   ANG: null
   HFL: null
@@ -249,7 +249,15 @@
   OUT: null
   PRC: 5
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -257,7 +265,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -273,31 +289,15 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 0
   - 2
   SID: 1
-  SIT: 1218978.0
+  SIT: 1157559.0
   VID:
   - 0
   - 2
-  WCT: '2023-09-10 19:43:34.955612'
+  WCT: '2023-09-11 11:32:55.160529'
 - AID: 0
   ANG: null
   HFL: null
@@ -310,7 +310,15 @@
   OUT: null
   PRC: 8
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -318,7 +326,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -334,31 +350,15 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 1
   - 2
   SID: 1
-  SIT: 1718978.0
+  SIT: 1657559.0
   VID:
   - 1
   - 2
-  WCT: '2023-09-10 19:43:34.964032'
+  WCT: '2023-09-11 11:32:55.175220'
 - AID: 0
   ANG:
     den: 4
@@ -374,7 +374,15 @@
   OUT: null
   PRC: 1
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -382,7 +390,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -398,29 +414,13 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 0
   SID: 2
-  SIT: 1720027.0
+  SIT: 1658666.0
   VID:
   - 0
-  WCT: '2023-09-10 19:43:35.008420'
+  WCT: '2023-09-11 11:32:55.206392'
 - AID: 0
   ANG:
     den: 4
@@ -436,7 +436,15 @@
   OUT: null
   PRC: 3
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -444,7 +452,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -460,29 +476,13 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 1
   SID: 2
-  SIT: 1721027.0
+  SIT: 1659666.0
   VID:
   - 1
-  WCT: '2023-09-10 19:43:35.023952'
+  WCT: '2023-09-11 11:32:55.214183'
 - AID: 0
   ANG:
     den: 4
@@ -498,7 +498,15 @@
   OUT: null
   PRC: 5
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -506,7 +514,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -522,29 +538,13 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 2
   SID: 2
-  SIT: 1722027.0
+  SIT: 1660666.0
   VID:
   - 2
-  WCT: '2023-09-10 19:43:35.032203'
+  WCT: '2023-09-11 11:32:55.237752'
 - AID: 0
   ANG: null
   HFL: null
@@ -557,7 +557,15 @@
   OUT: 1
   PRC: 3
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -565,7 +573,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -579,29 +595,13 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 0
   SID: 3
-  SIT: 1724036.0
+  SIT: 1660960.0
   VID:
   - 0
-  WCT: '2023-09-10 19:43:35.221420'
+  WCT: '2023-09-11 11:32:55.321874'
 - AID: 0
   ANG:
     den: 4
@@ -617,7 +617,15 @@
   OUT: null
   PRC: 1
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -625,7 +633,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -639,29 +655,13 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 1
   SID: 4
-  SIT: 1725092.0
+  SIT: 1662088.0
   VID:
   - 1
-  WCT: '2023-09-10 19:43:35.253800'
+  WCT: '2023-09-11 11:32:55.359431'
 - AID: 0
   ANG:
     den: 4
@@ -677,7 +677,15 @@
   OUT: null
   PRC: 1
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -685,7 +693,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -697,44 +713,36 @@
       - - erin
         - 2
       - - gary
-        - 0
-      state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
         - 0
       state: null
   QID:
   - 2
   SID: 5
-  SIT: 1729704.0
+  SIT: 1666542.0
   VID:
   - 2
-  WCT: '2023-09-10 19:43:35.539006'
+  WCT: '2023-09-11 11:32:55.611866'
 - AID: 0
   ANG: null
   HFL: null
   HLN: null
   INS: meas
-  LOG: Doing instruction meas with operands ['Q0=1', 'M0=0']
+  LOG: Doing instruction meas with operands ['Q0=1', 'M0=1']
   OPR:
   - Q0=1
-  - M0=0
-  OUT: 0
+  - M0=1
+  OUT: 1
   PRC: 3
   QGR:
-    8741911293192:
+    8744389950299:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -742,7 +750,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -754,15 +770,26 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
+  QID:
+  - 1
+  SID: 6
+  SIT: 1669973.0
+  VID:
+  - 1
+  WCT: '2023-09-11 11:32:55.883225'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: meas
+  LOG: Doing instruction meas with operands ['Q0=2', 'M0=0']
+  OPR:
+  - Q0=2
+  - M0=0
+  OUT: 0
+  PRC: 3
+  QGR:
+    8744389950299:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -770,26 +797,7 @@
       - - charlie
         - 0
       state: null
-  QID:
-  - 1
-  SID: 6
-  SIT: 1733183.0
-  VID:
-  - 1
-  WCT: '2023-09-10 19:43:35.842598'
-- AID: 0
-  ANG: null
-  HFL: null
-  HLN: null
-  INS: meas
-  LOG: Doing instruction meas with operands ['Q0=2', 'M0=1']
-  OPR:
-  - Q0=2
-  - M0=1
-  OUT: 1
-  PRC: 3
-  QGR:
-    8741911293192:
+    8744389979395:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -797,7 +805,15 @@
       - - frank
         - 0
       state: null
-    8741911309127:
+    8744389994271:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - david
+        - 0
+      state: null
+    8744389994391:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -807,26 +823,10 @@
       - - gary
         - 0
       state: null
-    8741911309187:
-      is_entangled: true
-      qubit_ids:
-      - - charlie
-        - 1
-      - - david
-        - 0
-      state: null
-    8741916116837:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 0
-      - - charlie
-        - 0
-      state: null
   QID:
   - 2
   SID: 7
-  SIT: 1733317.0
+  SIT: 1670027.0
   VID:
   - 2
-  WCT: '2023-09-10 19:43:35.892448'
+  WCT: '2023-09-11 11:32:55.904160'

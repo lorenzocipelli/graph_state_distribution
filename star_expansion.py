@@ -2,10 +2,15 @@ from netqasm.sdk.external import Socket, NetQASMConnection
 from netqasm.sdk import Qubit
 
 class QubitSocket:
+  """
+    Classe da utilizzare quando si vuole effettuare lo Star Expansion. Infatti, il metodo per l'SE accetta
+    come input solamente questa classe che ci permette di accoppiare il Qubit locale alla Socket classica
+    in modo da effettuare le dovute sincronizzazioni per portare avanti la Complementazione Locale all'interno
+    dell'SE (sia nel passaggio LC che nella misurazione in base Y)
+  """
   def __init__(self, local_qubit: Qubit, classic_socket: Socket):
     self.local_qubit = local_qubit
     self.classic_socket = classic_socket
-
 
 def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Socket, qubit_to_rotate: Qubit) :
     """
@@ -133,6 +138,8 @@ def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSo
         2) vertex_deletion() OR edge_addition()\n
         3) y_measurement
     '''
+    print(conn.app_name.capitalize() + ": Star Expansion START")
+
     local_edge_addition([a_0_qubit_socket] + c_i_qubit_socket, conn)
     local_complementation(a_0_qubit_socket, c_i_qubit_socket, conn)
     if belongs_W:
@@ -140,3 +147,5 @@ def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSo
     else:
         vertex_deletion(a_0_qubit_socket, conn)
     y_measurement(a_0_qubit_socket, c_i_qubit_socket, conn)
+
+    print(conn.app_name.capitalize() + ": Star Expansion END")

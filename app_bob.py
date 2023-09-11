@@ -3,7 +3,9 @@ from netqasm.sdk import EPRSocket
 from star_expansion import star_expansion, star_expansion_neighbour, QubitSocket
 
 def main(app_config=None, belongs_W=True, other_nodes = []):
+    
     epr_sock = {}
+
     alice_sock = Socket("bob", "alice", log_config=app_config.log_config)
     charlie_sock = Socket("bob", "charlie", log_config=app_config.log_config)
     frank_sock = Socket("bob", "frank", log_config=app_config.log_config)
@@ -49,12 +51,12 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=alice_sock)
         qs_frank = QubitSocket(local_qubit=q_ent_frank, classic_socket=frank_sock)
 
-        print("Bob: star expansion start")
         star_expansion(a_0_qubit_socket=qs_charlie,
                 c_i_qubit_socket=[qs_frank],
                 belongs_W=belongs_W, 
                 conn=bob)
-        print("Bob: star expansion end")
+        
+        alice_sock.send("ora_di_misurare")
 
 if __name__ == "__main__":
     main()
