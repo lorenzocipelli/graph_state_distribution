@@ -8,6 +8,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     epr_sock = {}
     
     erin_sock = Socket("gary", "erin", log_config=app_config.log_config)
+    bob_sock = Socket("gary", "bob", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -24,7 +25,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         gary.flush()
 
         """ 
-            questo bloccho di codice serve allo Star Expansion corrispettivo di: Erin
+            questo blocco di codice serve allo Star Expansion corrispettivo di: Erin
             per poter effettuare le rotazioni sull'asse Z in maniera sincronizzata
             vengono attivati dai codici di Local Complementation nello Star Expansion
             se ne trovano 1 su Gary perchè Gary è collegato con Erin e quindi sicuramente
@@ -35,6 +36,13 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         star_expansion_neighbour(conn=gary,
                             communicating_socket=erin_sock,
                             qubit_to_rotate=q_ent_erin)
+        
+        bob_sock.recv()
+
+        m_erin = q_ent_erin.measure()
+    
+    print("Gary measure -> " + str(m_erin))
+    return {"measured": int(m_erin)}
 
 if __name__ == "__main__":
     main()

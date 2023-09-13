@@ -6,7 +6,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.224024'
+  WCT: '2023-09-13 16:37:42.745626'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 23
   INS: RECV
@@ -15,7 +15,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.224250'
+  WCT: '2023-09-13 16:37:42.849514'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -24,7 +24,7 @@
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.300421'
+  WCT: '2023-09-13 16:37:42.970532'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -33,7 +33,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.300565'
+  WCT: '2023-09-13 16:37:42.970613'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -42,7 +42,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.530529'
+  WCT: '2023-09-13 16:37:43.177835'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -51,7 +51,7 @@
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.556853'
+  WCT: '2023-09-13 16:37:43.206389'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -60,7 +60,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.557037'
+  WCT: '2023-09-13 16:37:43.206444'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -69,7 +69,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.784132'
+  WCT: '2023-09-13 16:37:43.414360'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -78,7 +78,7 @@
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.806296'
+  WCT: '2023-09-13 16:37:43.449033'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -87,7 +87,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.806430'
+  WCT: '2023-09-13 16:37:43.449090'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -96,7 +96,7 @@
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.938671'
+  WCT: '2023-09-13 16:37:43.553757'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 23
   INS: WAIT_RECV
@@ -105,7 +105,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:55.938805'
+  WCT: '2023-09-13 16:37:43.553826'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 23
   INS: RECV
@@ -114,7 +114,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:56.298846'
+  WCT: '2023-09-13 16:37:43.873766'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -123,7 +123,7 @@
   REC: charlie
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:56.775381'
+  WCT: '2023-09-13 16:37:44.353278'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -132,7 +132,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:56.775550'
+  WCT: '2023-09-13 16:37:44.353332'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -141,7 +141,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:57.637803'
+  WCT: '2023-09-13 16:37:44.995659'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -150,7 +150,7 @@
   REC: charlie
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:57.819796'
+  WCT: '2023-09-13 16:37:45.187594'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -159,7 +159,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:57.819941'
+  WCT: '2023-09-13 16:37:45.187667'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -168,7 +168,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:58.285359'
+  WCT: '2023-09-13 16:37:45.659569'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -177,7 +177,7 @@
   REC: charlie
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:58.434030'
+  WCT: '2023-09-13 16:37:45.874967'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -186,7 +186,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:58.434169'
+  WCT: '2023-09-13 16:37:45.875043'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -195,7 +195,7 @@
   REC: alice
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:58.551127'
+  WCT: '2023-09-13 16:37:45.986713'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 23
   INS: WAIT_RECV
@@ -204,7 +204,7 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:32:58.551258'
+  WCT: '2023-09-13 16:37:45.986763'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 23
   INS: RECV
@@ -213,7 +213,7 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:32:58.908023'
+  WCT: '2023-09-13 16:37:46.203475'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -222,7 +222,7 @@
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:59.536897'
+  WCT: '2023-09-13 16:37:46.762619'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -231,7 +231,7 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:32:59.537014'
+  WCT: '2023-09-13 16:37:46.762701'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -240,7 +240,7 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:32:59.966411'
+  WCT: '2023-09-13 16:37:47.234790'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 27
   INS: SEND
@@ -249,7 +249,7 @@
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:33:00.001703'
+  WCT: '2023-09-13 16:37:47.276097'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: WAIT_RECV
@@ -258,7 +258,7 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:33:00.001845'
+  WCT: '2023-09-13 16:37:47.276190'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
   HLN: 28
   INS: RECV
@@ -267,22 +267,22 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:33:00.176453'
+  WCT: '2023-09-13 16:37:47.383720'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 52
+  HLN: 49
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:33:00.176584'
+  WCT: '2023-09-13 16:37:47.383768'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_alice.py
-  HLN: 52
+  HLN: 49
   INS: RECV
   LOG: 'Message received from bob: ora_di_misurare'
   MSG: ora_di_misurare
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-11 11:33:00.176634'
+  WCT: '2023-09-13 16:37:47.383791'

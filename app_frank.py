@@ -35,5 +35,12 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
                             communicating_socket=bob_sock,
                             qubit_to_rotate=q_ent_bob)
 
+        bob_sock.recv()
+
+        m_erin = q_ent_bob.measure()
+    
+    print("Frank measure -> " + str(m_erin))
+    return {"measured": int(m_erin)}
+
 if __name__ == "__main__":
     main()

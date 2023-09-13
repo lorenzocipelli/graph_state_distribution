@@ -1,165 +1,165 @@
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 112
+  HLN: 115
   INS: SEND
   LOG: 'Send classical message to alice: rot_Z'
   MSG: rot_Z
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.197483'
+  WCT: '2023-09-13 16:37:42.791016'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 114
+  HLN: 117
   INS: WAIT_RECV
   LOG: Waiting for a classical message from alice...
   MSG: null
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.300831'
+  WCT: '2023-09-13 16:37:43.000522'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 114
+  HLN: 117
   INS: RECV
   LOG: 'Message received from alice: done_rot_Z'
   MSG: done_rot_Z
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.300901'
+  WCT: '2023-09-13 16:37:43.000586'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 45
+  HLN: 48
   INS: SEND
   LOG: 'Send classical message to charlie: rot_Z'
   MSG: rot_Z
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.346971'
+  WCT: '2023-09-13 16:37:43.041018'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 47
+  HLN: 50
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: erin
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:55.368941'
+  WCT: '2023-09-13 16:37:43.053831'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 47
+  HLN: 50
   INS: RECV
   LOG: 'Message received from charlie: done_rot_Z'
   MSG: done_rot_Z
   REC: erin
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-11 11:32:55.482270'
+  WCT: '2023-09-13 16:37:43.156071'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 48
+  HLN: 51
   INS: SEND
   LOG: 'Send classical message to alice: rot_Z'
   MSG: rot_Z
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.482417'
+  WCT: '2023-09-13 16:37:43.156148'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 50
+  HLN: 53
   INS: WAIT_RECV
   LOG: Waiting for a classical message from alice...
   MSG: null
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.482520'
+  WCT: '2023-09-13 16:37:43.156199'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 50
+  HLN: 53
   INS: RECV
   LOG: 'Message received from alice: done_rot_Z'
   MSG: done_rot_Z
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.588358'
+  WCT: '2023-09-13 16:37:43.269993'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 45
+  HLN: 48
   INS: SEND
   LOG: 'Send classical message to gary: rot_Z'
   MSG: rot_Z
   REC: gary
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.588584'
+  WCT: '2023-09-13 16:37:43.270066'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 47
+  HLN: 50
   INS: WAIT_RECV
   LOG: Waiting for a classical message from gary...
   MSG: null
   REC: erin
   SEN: gary
   SOD: 0
-  WCT: '2023-09-11 11:32:55.620951'
+  WCT: '2023-09-13 16:37:43.298940'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 47
+  HLN: 50
   INS: RECV
   LOG: 'Message received from gary: done_rot_Z'
   MSG: done_rot_Z
   REC: erin
   SEN: gary
   SOD: 0
-  WCT: '2023-09-11 11:32:55.751329'
+  WCT: '2023-09-13 16:37:43.408241'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 48
+  HLN: 51
   INS: SEND
   LOG: 'Send classical message to alice: rot_Z'
   MSG: rot_Z
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.751470'
+  WCT: '2023-09-13 16:37:43.408287'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 50
+  HLN: 53
   INS: WAIT_RECV
   LOG: Waiting for a classical message from alice...
   MSG: null
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.751573'
+  WCT: '2023-09-13 16:37:43.408328'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 50
+  HLN: 53
   INS: RECV
   LOG: 'Message received from alice: done_rot_Z'
   MSG: done_rot_Z
   REC: erin
   SEN: alice
   SOD: 0
-  WCT: '2023-09-11 11:32:55.864918'
+  WCT: '2023-09-13 16:37:43.512634'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 58
+  HLN: 61
   INS: SEND
   LOG: 'Send classical message to alice: end'
   MSG: end
   REC: alice
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.865058'
+  WCT: '2023-09-13 16:37:43.512717'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 60
+  HLN: 63
   INS: SEND
   LOG: 'Send classical message to charlie: end'
   MSG: end
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.865144'
+  WCT: '2023-09-13 16:37:43.512763'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 60
+  HLN: 63
   INS: SEND
   LOG: 'Send classical message to gary: end'
   MSG: end
   REC: gary
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.865219'
+  WCT: '2023-09-13 16:37:43.512803'
 - HFL: /home/cipelli/Desktop/graph_state_distribution/app_erin.py
   HLN: 43
   INS: SEND
@@ -168,4 +168,4 @@
   REC: charlie
   SEN: erin
   SOD: 0
-  WCT: '2023-09-11 11:32:55.917908'
+  WCT: '2023-09-13 16:37:43.563878'

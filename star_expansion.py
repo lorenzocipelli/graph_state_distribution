@@ -22,7 +22,7 @@ def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Sock
     """
     msg = communicating_socket.recv()
     while (msg == "rot_Z") :
-        qubit_to_rotate.rot_Z(1,2) # pi/4
+        qubit_to_rotate.rot_Z(3,1) # pi/4 = rot_Z(1,2) | pi/2 = rot_Z(1,1) | -pi/2 = 3pi/2 = rot_Z(3,1)
         conn.flush()
         communicating_socket.send("done_rot_Z")
         msg = communicating_socket.recv()
@@ -38,10 +38,13 @@ def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], c
 
     """ 
         il blocco di codice successivo utilizza il metodo grafico coincidente con
-        la misurazione in base Y: LC seguita dalla rimozione del vertice misurato
+        la misurazione in base Y: LC seguita dalla rimozione del vertice misurato.
+        Come si può notare, ogni nodo locale c_i collega esattamente con il nodo che diventerà
+        centro stella e con un altro nodo esterno, su questi due esterni andrà fatta la rotazione Z
+        mentre su se stesso la rotazione X. Seguita poi dalla Vertex Deletion...
     """
     for to_delete in to_delete_qubits :
-        to_delete.local_qubit.rot_X(3,2) # 3pi/4 == -pi/4
+        to_delete.local_qubit.rot_X(1,1) # 3pi/4 == -pi/4
         to_delete.classic_socket.send("rot_Z") # ordina al qubit NON locale di fare rotazione
         conn.flush() # per poter ricevere il messaggio successivo [sincronizzazione]
         to_delete.classic_socket.recv() # attendo l'avvenuta rotazione
@@ -105,9 +108,9 @@ def local_complementation(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket],
         mentre, ai nodi localmente entangled fra di loro (nodi c_i)
         viene applicata una rotazione rispetto all'asse Z di pi/4
     """
-    a_0_qubit.local_qubit.rot_X(3,2) # 3pi/4 == -pi/4
+    a_0_qubit.local_qubit.rot_X(1,1) # 3pi/4 == -pi/4
     for c_i in c_i_qubits :
-        c_i.local_qubit.rot_Z(1,2) # pi/4
+        c_i.local_qubit.rot_Z(3,1) # pi/4
 
     a_0_qubit.classic_socket.send("rot_Z")
     conn.flush() # per poter ricevere il messaggio successivo [sincronizzazione]

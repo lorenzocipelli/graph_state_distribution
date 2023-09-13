@@ -9,6 +9,8 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
     alice_sock = Socket("bob", "alice", log_config=app_config.log_config)
     charlie_sock = Socket("bob", "charlie", log_config=app_config.log_config)
     frank_sock = Socket("bob", "frank", log_config=app_config.log_config)
+    gary_sock = Socket("bob", "gary", log_config=app_config.log_config)
+    david_sock = Socket("bob", "david", log_config=app_config.log_config)
 
     for element in other_nodes:
         epr_sock[element] = EPRSocket(element)
@@ -28,7 +30,7 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         bob.flush()
 
         """ 
-            questo bloccho di codice serve allo Star Expansion corrispettivo di: Charlie
+            questo blocco di codice serve allo Star Expansion corrispettivo di: Charlie
             per poter effettuare le rotazioni sull'asse Z in maniera sincronizzata
             vengono attivati dai codici di Local Complementation nello Star Expansion
             se ne trovano 1 su Bob perchè Bob è collegato con Charlie e quindi sicuramente
@@ -56,7 +58,12 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
                 belongs_W=belongs_W, 
                 conn=bob)
         
-        alice_sock.send("ora_di_misurare")
+        # dico a tutti i nodi rimanenti di effettuare la misurazione
+        alice_sock.send("ora_di_misurare") # alice
+        gary_sock.send("ora_di_misurare") # gary
+        frank_sock.send("ora_di_misurare") # frank
+        charlie_sock.send("ora_di_misurare") # charlie
+        david_sock.send("ora_di_misurare") # david
 
 if __name__ == "__main__":
     main()

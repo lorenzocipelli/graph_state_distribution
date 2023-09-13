@@ -52,7 +52,14 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
                         belongs_W=belongs_W, 
                         conn=charlie)
 
-        bob_sock.send("go2") # per procedere con lo SE di Bob      
+        bob_sock.send("go2") # per procedere con lo SE di Bob  
+
+        bob_sock.recv()
+
+        m_erin = q_ent_erin.measure()
+    
+    print("Charlie measure -> " + str(m_erin))    
+    return {"measured": int(m_erin)}
 
 if __name__ == "__main__":
     main()
