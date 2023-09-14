@@ -1,0 +1,381 @@
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: h
+  LOG: Doing instruction h with operands ['Q0=0']
+  OPR:
+  - Q0=0
+  OUT: null
+  PRC: 40
+  QGR:
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  SID: 0
+  SIT: 5728.0
+  VID:
+  - 0
+  WCT: '2023-09-14 11:02:39.870386'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: h
+  LOG: Doing instruction h with operands ['Q0=1']
+  OPR:
+  - Q0=1
+  OUT: null
+  PRC: 51
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 1
+  SID: 0
+  SIT: 8728.0
+  VID:
+  - 1
+  WCT: '2023-09-14 11:02:39.876724'
+- AID: 0
+  ANG:
+    den: 2
+    num: 3
+  HFL: null
+  HLN: null
+  INS: rot_z
+  LOG: Doing instruction rot_z with operands ['Q0=0', '3=None', '1=None']
+  OPR:
+  - Q0=0
+  - 3=None
+  - 1=None
+  OUT: null
+  PRC: 1
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      - - charlie
+        - 1
+      - - charlie
+        - 2
+      - - david
+        - 0
+      - - gary
+        - 0
+      state: null
+  QID:
+  - 0
+  SID: 1
+  SIT: 4074729.0
+  VID:
+  - 0
+  WCT: '2023-09-14 11:02:55.105126'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: cphase
+  LOG: Doing instruction cphase with operands ['Q0=0', 'Q1=1']
+  OPR:
+  - Q0=0
+  - Q1=1
+  OUT: null
+  PRC: 2
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 0
+      - - bob
+        - 1
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 0
+  - 1
+  SID: 2
+  SIT: 4583275.0
+  VID:
+  - 0
+  - 1
+  WCT: '2023-09-14 11:03:01.090942'
+- AID: 0
+  ANG:
+    den: 2
+    num: 1
+  HFL: null
+  HLN: null
+  INS: rot_x
+  LOG: Doing instruction rot_x with operands ['Q0=0', '1=None', '1=None']
+  OPR:
+  - Q0=0
+  - 1=None
+  - 1=None
+  OUT: null
+  PRC: 1
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 0
+      - - bob
+        - 1
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 0
+  SID: 3
+  SIT: 4584503.0
+  VID:
+  - 0
+  WCT: '2023-09-14 11:03:01.710603'
+- AID: 0
+  ANG:
+    den: 2
+    num: 3
+  HFL: null
+  HLN: null
+  INS: rot_z
+  LOG: Doing instruction rot_z with operands ['Q0=1', '3=None', '1=None']
+  OPR:
+  - Q0=1
+  - 3=None
+  - 1=None
+  OUT: null
+  PRC: 3
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 0
+      - - bob
+        - 1
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 1
+  SID: 3
+  SIT: 4585503.0
+  VID:
+  - 1
+  WCT: '2023-09-14 11:03:03.034685'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: meas
+  LOG: Doing instruction meas with operands ['Q0=0', 'M0=0']
+  OPR:
+  - Q0=0
+  - M0=0
+  OUT: 0
+  PRC: 3
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 1
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 0
+  SID: 4
+  SIT: 4585542.0
+  VID:
+  - 0
+  WCT: '2023-09-14 11:03:03.545105'
+- AID: 0
+  ANG:
+    den: 2
+    num: 1
+  HFL: null
+  HLN: null
+  INS: rot_x
+  LOG: Doing instruction rot_x with operands ['Q0=1', '1=None', '1=None']
+  OPR:
+  - Q0=1
+  - 1=None
+  - 1=None
+  OUT: null
+  PRC: 1
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - bob
+        - 1
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 1
+  SID: 5
+  SIT: 4586617.0
+  VID:
+  - 1
+  WCT: '2023-09-14 11:03:03.878606'
+- AID: 0
+  ANG: null
+  HFL: null
+  HLN: null
+  INS: meas
+  LOG: Doing instruction meas with operands ['Q0=1', 'M0=1']
+  OPR:
+  - Q0=1
+  - M0=1
+  OUT: 1
+  PRC: 3
+  QGR:
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - david
+        - 0
+      - - frank
+        - 0
+      - - gary
+        - 0
+      state: null
+    8755181848885:
+      is_entangled: false
+      qubit_ids:
+      - - charlie
+        - 2
+      state:
+      - - !!python/complex 0.0
+        - !!python/complex 0.0
+      - - !!python/complex 0.0
+        - !!python/complex 1.0
+  QID:
+  - 1
+  SID: 6
+  SIT: 4590603.0
+  VID:
+  - 1
+  WCT: '2023-09-14 11:03:04.310282'

@@ -1,5 +1,10 @@
 from netqasm.sdk.external import Socket, NetQASMConnection
 from netqasm.sdk import Qubit
+import json 
+
+f = open('results.json')
+dictionary = json.load(f)
+f.close()
 
 class QubitSocket:
   """
@@ -13,7 +18,7 @@ class QubitSocket:
     self.classic_socket = classic_socket
 
 def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Socket, qubit_to_rotate: Qubit) :
-    """
+    """ 
         Metodo da utilizzare ogni volta che su un nodo vicino avviene l'operazione di Star Expansion.
         Questa funzione permette di effettuare sul qubit vicino (quello su cui viene chiamata la funzione) le
         rotazioni necessarie per la riuscita corretta dei Local Complementation dell'SE (sia nell'LC sul qubit a_0
@@ -152,3 +157,16 @@ def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSo
     y_measurement(a_0_qubit_socket, c_i_qubit_socket, conn)
 
     print(conn.app_name.capitalize() + ": Star Expansion END")
+
+
+
+counter = 0
+def update_json():
+    global counter
+    if counter == 4: 
+        with open("results.json", "w") as write_file:
+            json.dump(dictionary, write_file)
+        write_file.close()
+    else :
+        counter += 1
+

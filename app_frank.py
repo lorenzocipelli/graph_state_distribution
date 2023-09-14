@@ -1,6 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion_neighbour
+from star_expansion import dictionary,star_expansion_neighbour, update_json
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
@@ -38,7 +38,9 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         bob_sock.recv()
 
         m_erin = q_ent_bob.measure()
-    
+    #rw_json("Frank", m_erin)
+    dictionary["frank"].append(int(m_erin))
+    update_json()
     print("Frank measure -> " + str(m_erin))
     return {"measured": int(m_erin)}
 

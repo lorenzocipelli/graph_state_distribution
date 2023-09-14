@@ -1,0 +1,472 @@
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between charlie and bob
+  MSR: null
+  NOD:
+  - charlie
+  - bob
+  PTH:
+  - ch18
+  QGR: {}
+  QID:
+  - 0
+  - 0
+  SIT: 2728.0
+  TYP: null
+  WCT: '2023-09-14 11:02:39.766547'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between charlie and bob
+  MSR: null
+  NOD:
+  - charlie
+  - bob
+  PTH:
+  - ch18
+  QGR:
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 0
+  SIT: 3728.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:39.868056'
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between frank and bob
+  MSR: null
+  NOD:
+  - frank
+  - bob
+  PTH:
+  - ch4
+  QGR:
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 1
+  SIT: 5728.0
+  TYP: null
+  WCT: '2023-09-14 11:02:39.872164'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between frank and bob
+  MSR: null
+  NOD:
+  - frank
+  - bob
+  PTH:
+  - ch4
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 1
+  SIT: 6728.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:39.875128'
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between erin and alice
+  MSR: null
+  NOD:
+  - erin
+  - alice
+  PTH:
+  - ch14
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 0
+  SIT: 51082.0
+  TYP: null
+  WCT: '2023-09-14 11:02:40.692891'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between erin and alice
+  MSR: null
+  NOD:
+  - erin
+  - alice
+  PTH:
+  - ch14
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 0
+  SIT: 52082.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:40.700295'
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between erin and charlie
+  MSR: null
+  NOD:
+  - erin
+  - charlie
+  PTH:
+  - ch12
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 1
+  - 1
+  SIT: 54082.0
+  TYP: null
+  WCT: '2023-09-14 11:02:40.818731'
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between david and charlie
+  MSR: null
+  NOD:
+  - david
+  - charlie
+  PTH:
+  - ch15
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 2
+  SIT: 54082.0
+  TYP: null
+  WCT: '2023-09-14 11:02:40.826864'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between david and charlie
+  MSR: null
+  NOD:
+  - david
+  - charlie
+  PTH:
+  - ch15
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755146120316:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 2
+      - - david
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 2
+  SIT: 55082.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:40.971621'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between erin and charlie
+  MSR: null
+  NOD:
+  - erin
+  - charlie
+  PTH:
+  - ch12
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755146108843:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - erin
+        - 1
+      state: null
+    8755146120316:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 2
+      - - david
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 1
+  - 1
+  SIT: 55082.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:41.029081'
+- BAS: null
+  INS: epr_EntanglementStage.START
+  LOG: start entanglement creation between gary and erin
+  MSR: null
+  NOD:
+  - gary
+  - erin
+  PTH:
+  - ch6
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755146108843:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - erin
+        - 1
+      state: null
+    8755146120316:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 2
+      - - david
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 2
+  SIT: 57082.0
+  TYP: null
+  WCT: '2023-09-14 11:02:41.793217'
+- BAS: null
+  INS: epr_EntanglementStage.FINISH
+  LOG: entanglement of type 0 created between gary and erin
+  MSR: null
+  NOD:
+  - gary
+  - erin
+  PTH:
+  - ch6
+  QGR:
+    8755146091824:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
+    8755146108783:
+      is_entangled: true
+      qubit_ids:
+      - - alice
+        - 0
+      - - erin
+        - 0
+      state: null
+    8755146108843:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 1
+      - - erin
+        - 1
+      state: null
+    8755146108908:
+      is_entangled: true
+      qubit_ids:
+      - - erin
+        - 2
+      - - gary
+        - 0
+      state: null
+    8755146120316:
+      is_entangled: true
+      qubit_ids:
+      - - charlie
+        - 2
+      - - david
+        - 0
+      state: null
+    8755181849505:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 0
+      - - charlie
+        - 0
+      state: null
+  QID:
+  - 0
+  - 2
+  SIT: 58082.0
+  TYP: epr_EntanglementType.CK
+  WCT: '2023-09-14 11:02:42.315681'
