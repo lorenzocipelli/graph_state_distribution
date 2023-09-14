@@ -167,6 +167,7 @@ def update_json():
         with open("results.json", "w") as write_file:
             json.dump(dictionary, write_file)
         write_file.close()
+        
     else :
         counter += 1
 
