@@ -6,6 +6,11 @@ f = open('results.json')
 dictionary = json.load(f)
 f.close()
 
+e = open("errors.json")
+errors_tracker = json.load(e)
+e.close()
+
+
 class QubitSocket:
   """
     Classe da utilizzare quando si vuole effettuare lo Star Expansion. Infatti, il metodo per l'SE accetta
@@ -167,7 +172,16 @@ def update_json():
         with open("results.json", "w") as write_file:
             json.dump(dictionary, write_file)
         write_file.close()
-        
+        #controllo eventuali errori
+        for k in dictionary:
+            for i in range(0, len(dictionary["alice"])):
+                if dictionary["alice"][i] != dictionary[k][i]:
+                    errors_tracker[k] += 1
+        with open("errors.json", "w") as write_file:
+            json.dump(errors_tracker, write_file)
+        write_file.close()
     else :
         counter += 1
+
+
 
