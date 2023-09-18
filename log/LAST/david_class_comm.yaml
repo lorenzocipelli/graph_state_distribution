@@ -1,49 +1,49 @@
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 33
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 32
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: david
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:38.911985'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 33
+  WCT: '2023-09-18 08:27:28.426259'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 32
   INS: RECV
   LOG: 'Message received from charlie: rot_Z'
   MSG: rot_Z
   REC: david
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:54.977525'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 37
+  WCT: '2023-09-18 08:27:31.545370'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 36
   INS: SEND
   LOG: 'Send classical message to charlie: done_rot_Z'
   MSG: done_rot_Z
   REC: charlie
   SEN: david
   SOD: 0
-  WCT: '2023-09-14 14:21:55.561827'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 38
+  WCT: '2023-09-18 08:27:31.921797'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 37
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: david
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:55.561916'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 38
+  WCT: '2023-09-18 08:27:31.921933'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 37
   INS: RECV
   LOG: 'Message received from charlie: end'
   MSG: end
   REC: david
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:56.071568'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_david.py
+  WCT: '2023-09-18 08:27:32.258519'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
   HLN: 40
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
@@ -51,8 +51,8 @@
   REC: david
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:21:56.071699'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_david.py
+  WCT: '2023-09-18 08:27:32.258602'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_david.py
   HLN: 40
   INS: RECV
   LOG: 'Message received from bob: ora_di_misurare'
@@ -60,4 +60,4 @@
   REC: david
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.660903'
+  WCT: '2023-09-18 08:27:33.994697'

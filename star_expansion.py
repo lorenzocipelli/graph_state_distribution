@@ -6,9 +6,8 @@ f = open('results.json')
 dictionary = json.load(f)
 f.close()
 
-e = open("errors.json")
-errors_tracker = json.load(e)
-e.close()
+
+
 
 
 class QubitSocket:
@@ -164,15 +163,16 @@ def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSo
     print(conn.app_name.capitalize() + ": Star Expansion END")
 
 
-
 counter = 0
 def update_json():
     global counter
     if counter == 4: 
+        counter = 0
         with open("results.json", "w") as write_file:
             json.dump(dictionary, write_file)
         write_file.close()
         #controllo eventuali errori
+        errors_tracker = {"charlie": 0, "david": 0, "frank": 0, "gary": 0}
         for k in dictionary:
             for i in range(0, len(dictionary["alice"])):
                 if dictionary["alice"][i] != dictionary[k][i]:

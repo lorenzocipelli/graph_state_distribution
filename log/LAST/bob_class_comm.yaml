@@ -1,49 +1,49 @@
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 33
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 32
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:38.377366'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 33
+  WCT: '2023-09-18 08:27:28.344517'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 32
   INS: RECV
   LOG: 'Message received from charlie: rot_Z'
   MSG: rot_Z
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:53.196492'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 37
+  WCT: '2023-09-18 08:27:30.865545'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 36
   INS: SEND
   LOG: 'Send classical message to charlie: done_rot_Z'
   MSG: done_rot_Z
   REC: charlie
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:21:54.116391'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 38
+  WCT: '2023-09-18 08:27:31.050281'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 37
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
   MSG: null
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:54.116482'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 38
+  WCT: '2023-09-18 08:27:31.050408'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 37
   INS: RECV
   LOG: 'Message received from charlie: end'
   MSG: end
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:57.397981'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:32.315807'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 47
   INS: WAIT_RECV
   LOG: Waiting for a classical message from charlie...
@@ -51,8 +51,8 @@
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:21:57.398097'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:32.315896'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 47
   INS: RECV
   LOG: 'Message received from charlie: go2'
@@ -60,107 +60,107 @@
   REC: bob
   SEN: charlie
   SOD: 0
-  WCT: '2023-09-14 14:22:00.368409'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 125
+  WCT: '2023-09-18 08:27:32.421128'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 124
   INS: SEND
   LOG: 'Send classical message to alice: rot_Z'
   MSG: rot_Z
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:03.357968'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 127
+  WCT: '2023-09-18 08:27:32.640931'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 126
   INS: WAIT_RECV
   LOG: Waiting for a classical message from alice...
   MSG: null
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-14 14:22:06.581029'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 127
+  WCT: '2023-09-18 08:27:33.238649'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 126
   INS: RECV
   LOG: 'Message received from alice: done_rot_Z'
   MSG: done_rot_Z
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-14 14:22:06.682812'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 58
+  WCT: '2023-09-18 08:27:33.356200'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 57
   INS: SEND
   LOG: 'Send classical message to frank: rot_Z'
   MSG: rot_Z
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:06.735283'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 60
+  WCT: '2023-09-18 08:27:33.404075'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 59
   INS: WAIT_RECV
   LOG: Waiting for a classical message from frank...
   MSG: null
   REC: bob
   SEN: frank
   SOD: 0
-  WCT: '2023-09-14 14:22:06.803503'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 60
+  WCT: '2023-09-18 08:27:33.419314'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 59
   INS: RECV
   LOG: 'Message received from frank: done_rot_Z'
   MSG: done_rot_Z
   REC: bob
   SEN: frank
   SOD: 0
-  WCT: '2023-09-14 14:22:06.933888'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 61
+  WCT: '2023-09-18 08:27:33.537696'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 60
   INS: SEND
   LOG: 'Send classical message to alice: rot_Z'
   MSG: rot_Z
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:06.934017'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 63
+  WCT: '2023-09-18 08:27:33.537819'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 62
   INS: WAIT_RECV
   LOG: Waiting for a classical message from alice...
   MSG: null
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-14 14:22:06.934118'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 63
+  WCT: '2023-09-18 08:27:33.537907'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 62
   INS: RECV
   LOG: 'Message received from alice: done_rot_Z'
   MSG: done_rot_Z
   REC: bob
   SEN: alice
   SOD: 0
-  WCT: '2023-09-14 14:22:07.049843'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 71
+  WCT: '2023-09-18 08:27:33.812610'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 70
   INS: SEND
   LOG: 'Send classical message to alice: end'
   MSG: end
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.049925'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 73
+  WCT: '2023-09-18 08:27:33.812734'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
+  HLN: 72
   INS: SEND
   LOG: 'Send classical message to frank: end'
   MSG: end
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.049970'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:33.812810'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 62
   INS: SEND
   LOG: 'Send classical message to alice: ora_di_misurare'
@@ -168,8 +168,8 @@
   REC: alice
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.074951'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:33.887755'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 63
   INS: SEND
   LOG: 'Send classical message to gary: ora_di_misurare'
@@ -177,8 +177,8 @@
   REC: gary
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.075036'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:33.887889'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 64
   INS: SEND
   LOG: 'Send classical message to frank: ora_di_misurare'
@@ -186,8 +186,8 @@
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.075075'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:33.887954'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 65
   INS: SEND
   LOG: 'Send classical message to charlie: ora_di_misurare'
@@ -195,8 +195,8 @@
   REC: charlie
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.075112'
-- HFL: /home/annalisa/Desktop/graph_state_distribution/app_bob.py
+  WCT: '2023-09-18 08:27:33.888016'
+- HFL: /home/cipelli/Desktop/graph_state_distribution/app_bob.py
   HLN: 66
   INS: SEND
   LOG: 'Send classical message to david: ora_di_misurare'
@@ -204,4 +204,4 @@
   REC: david
   SEN: bob
   SOD: 0
-  WCT: '2023-09-14 14:22:07.075147'
+  WCT: '2023-09-18 08:27:33.888128'
