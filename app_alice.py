@@ -1,6 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket, Qubit
-from star_expansion import dictionary, update_json, star_expansion_neighbour
+from star_expansion import dictionary, update_json, star_expansion_neighbour, label
 import json
 def main(app_config=None, belongs_W=True, other_nodes=[]):
 
@@ -21,7 +21,9 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with alice:
         q_ent_erin : Qubit = epr_sock["erin"].recv_keep()[0]
         q_ent_erin.H()
-
+        label["alice"]["erin"]["label"] = 0
+        label["alice"]["erin"]["shape"] = 0
+        
         alice.flush()
 
         """ 
@@ -49,11 +51,12 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         bob_sock.recv()
 
         m_erin = q_ent_erin.measure() # basis=0 -> X ; basis=1 -> Y ; basis=2 -> Z 
+
+    #print("Alice measure -> " + str(label["alice"]))
+    #dictionary["alice"].append(int(out))
+    #update_json()
     
-    print("Alice measure -> " + str(m_erin))
-    dictionary["alice"].append(int(m_erin))
-    update_json()
-    return {"measured": int(m_erin)}
+    #return {"measured": int(out)}
 
 if __name__ == "__main__":
     main()

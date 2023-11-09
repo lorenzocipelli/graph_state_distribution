@@ -1,6 +1,6 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import dictionary, update_json,star_expansion_neighbour
+from star_expansion import dictionary, update_json,star_expansion_neighbour, label
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
@@ -21,7 +21,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with david:
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
-
+        label["david"]["charlie"]["label"] = 0
+        label["david"]["charlie"]["shape"] = 0
         david.flush()
 
         """ 
@@ -41,10 +42,11 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
 
         m_erin = q_ent_charlie.measure()
     #rw_json("David", m_erin)
-    dictionary["david"].append(int(m_erin))
-    update_json()
-    print("David measure -> " + str(m_erin))
-    return {"measured": int(m_erin)}
+    
+   #dictionary["david"].append(int(out))
+    #update_json()
+    #print("David measure -> " + str(out))
+    #return {"measured": int(out)}
 
 if __name__ == "__main__":
     main()

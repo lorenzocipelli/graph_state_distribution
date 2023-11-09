@@ -1,36 +1,7 @@
-- app_alice:
-    measured: 0
+- app_alice: null
   app_bob: null
-  app_charlie:
-    measured: 0
-  app_david:
-    measured: 1
+  app_charlie: null
+  app_david: null
   app_erin: null
-  app_frank:
-    measured: 0
-  app_gary:
-    measured: 0
-- app_alice:
-    measured: 1
-  app_bob: null
-  app_charlie:
-    measured: 0
-  app_david:
-    measured: 0
-  app_erin: null
-  app_frank:
-    measured: 0
-  app_gary:
-    measured: 0
-- app_alice:
-    measured: 0
-  app_bob: null
-  app_charlie:
-    measured: 0
-  app_david:
-    measured: 1
-  app_erin: null
-  app_frank:
-    measured: 0
-  app_gary:
-    measured: 1
+  app_frank: null
+  app_gary: null

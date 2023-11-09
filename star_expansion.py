@@ -6,8 +6,38 @@ f = open('results.json')
 dictionary = json.load(f)
 f.close()
 
+# parte nuova
+# introduco un dizionario di etichette
+# in ciascun indice salvero lo stato iniziale dei qubit e 
+# li aggiornero dopo ogni misurazione y
+""" label = {"alice": {},
+         "bob": {},
+         "charlie": {},
+         "david": {},
+         "erin": {},
+         "frank": {},
+         "gary": {}} """
 
+label_names = ['alice', 'bob', 'charlie', 'david', 'erin', 'frank', 'gary']
+values = ['label', 'shape']
 
+label = {l1: {
+            l2: {
+                val: 0 for val in values
+            } for l2 in label_names
+        } for l1 in label_names}
+
+def XOR_3 ( a, b, c):
+    if (a+b+c) == 1 or (a+b+c) == 3:
+        return 1
+    else :
+        return 0
+    
+def XOR_2 (a,b):
+    if (a+b) == 1 :
+        return 1
+    else :
+        return 0
 
 
 class QubitSocket:
@@ -17,9 +47,10 @@ class QubitSocket:
     in modo da effettuare le dovute sincronizzazioni per portare avanti la Complementazione Locale all'interno
     dell'SE (sia nel passaggio LC che nella misurazione in base Y)
   """
-  def __init__(self, local_qubit: Qubit, classic_socket: Socket):
+  def __init__(self, local_qubit: Qubit, classic_socket: Socket, neighbour_name: str):
     self.local_qubit = local_qubit
     self.classic_socket = classic_socket
+    self.n_name = neighbour_name
 
 def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Socket, qubit_to_rotate: Qubit) :
     """ 
@@ -35,6 +66,7 @@ def star_expansion_neighbour(conn: NetQASMConnection, communicating_socket: Sock
         conn.flush()
         communicating_socket.send("done_rot_Z")
         msg = communicating_socket.recv()
+    
 
 
 def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], conn: NetQASMConnection) :
@@ -44,7 +76,7 @@ def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], c
         successiva eliminazione del nodo su cui essa è stata applicata
         (rimane solamente il sottografo conseguenza della LC)
     """
-
+    richard_hammond = {}
     """ 
         il blocco di codice successivo utilizza il metodo grafico coincidente con
         la misurazione in base Y: LC seguita dalla rimozione del vertice misurato.
@@ -70,13 +102,15 @@ def y_measurement(a_0_qubit: QubitSocket, to_delete_qubits: list[QubitSocket], c
     a_0_qubit.classic_socket.send("end")
     for to_delete in to_delete_qubits :
         to_delete.classic_socket.send("end")
-
     """ 
-        elininazione definitiva dei qubit locali sul nodo (c_i)
+        eliminazione definitiva dei qubit locali sul nodo (c_i)
     """
     for to_delete in to_delete_qubits :
-        vertex_deletion(to_delete, conn)
+        richard_hammond[to_delete.n_name] = vertex_deletion(to_delete, conn)
         conn.flush()
+
+    return richard_hammond
+            
 
     # VECCHIO CODICE, RIMPIAZZATO CON QUELLO DI SOPRA # # # # # # # # # # # # # # # # # #
     # il blocco di codice successivo permette l'utilizzo della misurazione in base Y
@@ -95,8 +129,10 @@ def vertex_deletion(a_0_qubit: QubitSocket, conn: NetQASMConnection):
         all'insieme W. Ottenuto attraverso misurazione del qubit a_0 
         nella base Z (base computazionale)
     """
-    a_0_qubit.local_qubit.measure() # Z-basis measurement
+    jeremy_clarkson = a_0_qubit.local_qubit.measure() # Z-basis measurement
     conn.flush()
+
+    return jeremy_clarkson
 
 
 def remove_a0_local_edges(a_0_qubit: QubitSocket, c_i_qubits: list[QubitSocket], conn: NetQASMConnection):
@@ -145,20 +181,33 @@ def local_edge_addition(local_qubits: list[QubitSocket], conn: NetQASMConnection
 
     conn.flush()
 
-def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSocket], belongs_W: bool, conn: NetQASMConnection):
+def star_expansion(a_0_qubit_socket: QubitSocket, c_i_qubit_socket: list[QubitSocket], belongs_W: bool, neighbour_list: list[str], ex_star_node: str, conn: NetQASMConnection):
     ''' 1) local_complementation()\n
         2) vertex_deletion() OR edge_addition()\n
         3) y_measurement
     '''
+
     print(conn.app_name.capitalize() + ": Star Expansion START")
 
+    the_stig = []
     local_edge_addition([a_0_qubit_socket] + c_i_qubit_socket, conn)
     local_complementation(a_0_qubit_socket, c_i_qubit_socket, conn)
     if belongs_W:
         remove_a0_local_edges(a_0_qubit_socket, c_i_qubit_socket, conn)
+        
     else:
-        vertex_deletion(a_0_qubit_socket, conn)
-    y_measurement(a_0_qubit_socket, c_i_qubit_socket, conn)
+        # ad ogni vertex deletion deve avvenire una concatenazione
+        # del qubit neighboor con 
+        james_may = vertex_deletion(a_0_qubit_socket, conn)
+        for nl in neighbour_list:
+            label[nl][ex_star_node]["label"] = XOR_2(label[nl][ex_star_node]["label"], james_may)
+            label[nl][ex_star_node]["shape"] = 1
+
+    the_stig = y_measurement(a_0_qubit_socket, c_i_qubit_socket, conn)
+    neighbour_list.remove(a_0_qubit_socket.n_name) # rimuovere la label di a_0, non serve aggioranrla
+    for nl in neighbour_list:
+            label[nl][ex_star_node]["label"] = XOR_3(label[nl][ex_star_node]["label"], label[ex_star_node][nl]["label"], the_stig[nl])
+            label[nl][ex_star_node]["shape"] = 1
 
     print(conn.app_name.capitalize() + ": Star Expansion END")
 

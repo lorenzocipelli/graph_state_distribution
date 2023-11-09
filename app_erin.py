@@ -1,6 +1,7 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion, QubitSocket
+from pprint import pprint
+from star_expansion import star_expansion, QubitSocket, label
 
 
 def main(app_config=None, belongs_W=True, other_nodes=[]):
@@ -31,15 +32,18 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         erin.flush()
 
         # creazione oggetti in vista dello Star Expansion
-        qs_alice = QubitSocket(local_qubit=q_ent_alice, classic_socket=alice_sock)
-        qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=charlie_sock)
-        qs_gary = QubitSocket(local_qubit=q_ent_gary, classic_socket=gary_sock)
+        qs_alice = QubitSocket(local_qubit=q_ent_alice, classic_socket=alice_sock, neighbour_name="alice")
+        qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=charlie_sock, neighbour_name="charlie")
+        qs_gary = QubitSocket(local_qubit=q_ent_gary, classic_socket=gary_sock, neighbour_name="gary")
 
         star_expansion(a_0_qubit_socket=qs_alice,
                         c_i_qubit_socket=[qs_charlie, qs_gary],
-                        belongs_W=belongs_W, 
+                        belongs_W=belongs_W,
+                        neighbour_list=["alice", "charlie", "gary"],
+                        ex_star_node="erin",
                         conn=erin)
 
+        pprint(label)
         charlie_sock.send("go1") # per procedere con lo SE di Charlie  
 
 if __name__ == "__main__":

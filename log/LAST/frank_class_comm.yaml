@@ -1,63 +1,63 @@
-- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 32
+- HFL: /home/cipelli/Downloads/graph_state_distribution/star_expansion.py
+  HLN: 63
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:28.435691'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 32
+  WCT: '2023-11-09 10:04:36.294877'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/star_expansion.py
+  HLN: 63
   INS: RECV
   LOG: 'Message received from bob: rot_Z'
   MSG: rot_Z
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:33.470299'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 36
+  WCT: '2023-11-09 10:04:41.613358'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/star_expansion.py
+  HLN: 67
   INS: SEND
   LOG: 'Send classical message to bob: done_rot_Z'
   MSG: done_rot_Z
   REC: bob
   SEN: frank
   SOD: 0
-  WCT: '2023-09-18 08:27:33.497275'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 37
+  WCT: '2023-11-09 10:04:41.665371'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/star_expansion.py
+  HLN: 68
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:33.497393'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/star_expansion.py
-  HLN: 37
+  WCT: '2023-11-09 10:04:41.665485'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/star_expansion.py
+  HLN: 68
   INS: RECV
   LOG: 'Message received from bob: end'
   MSG: end
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:33.834173'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 38
+  WCT: '2023-11-09 10:04:41.920140'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/app_frank.py
+  HLN: 39
   INS: WAIT_RECV
   LOG: Waiting for a classical message from bob...
   MSG: null
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:33.834299'
-- HFL: /home/cipelli/Desktop/graph_state_distribution/app_frank.py
-  HLN: 38
+  WCT: '2023-11-09 10:04:41.920275'
+- HFL: /home/cipelli/Downloads/graph_state_distribution/app_frank.py
+  HLN: 39
   INS: RECV
   LOG: 'Message received from bob: ora_di_misurare'
   MSG: ora_di_misurare
   REC: frank
   SEN: bob
   SOD: 0
-  WCT: '2023-09-18 08:27:33.955243'
+  WCT: '2023-11-09 10:04:42.263209'

@@ -1,6 +1,7 @@
 from netqasm.sdk.external import NetQASMConnection, Socket
 from netqasm.sdk import EPRSocket
-from star_expansion import star_expansion, star_expansion_neighbour, QubitSocket
+from pprint import pprint
+from star_expansion import star_expansion, star_expansion_neighbour, QubitSocket, label
 
 def main(app_config=None, belongs_W=True, other_nodes = []):
     
@@ -23,7 +24,7 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
     with bob:      
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
-        
+
         q_ent_frank = epr_sock["frank"].create_keep()[0]
         q_ent_frank.H()
 
@@ -50,14 +51,17 @@ def main(app_config=None, belongs_W=True, other_nodes = []):
         # notare che la socket classica di Charlie viene rimpiazzata con quella di Alice
         # questo perché dopo il secondo SE Bob comunicherà direttamente con il centro
         # stella, ovvero proprio con Alice
-        qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=alice_sock)
-        qs_frank = QubitSocket(local_qubit=q_ent_frank, classic_socket=frank_sock)
+        qs_charlie = QubitSocket(local_qubit=q_ent_charlie, classic_socket=alice_sock, neighbour_name="alice")
+        qs_frank = QubitSocket(local_qubit=q_ent_frank, classic_socket=frank_sock, neighbour_name="frank")
 
         star_expansion(a_0_qubit_socket=qs_charlie,
                 c_i_qubit_socket=[qs_frank],
                 belongs_W=belongs_W, 
+                neighbour_list=["alice", "frank"],
+                ex_star_node="bob",
                 conn=bob)
         
+        pprint(label)
         # dico a tutti i nodi rimanenti di effettuare la misurazione
         alice_sock.send("ora_di_misurare") # alice
         gary_sock.send("ora_di_misurare") # gary
