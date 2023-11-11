@@ -21,8 +21,6 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with gary:
         q_ent_erin = epr_sock["erin"].recv_keep()[0]
         q_ent_erin.H()
-        label["gary"]["erin"]["label"] = 0
-        label["gary"]["erin"]["shape"] = 0
 
         gary.flush()
 

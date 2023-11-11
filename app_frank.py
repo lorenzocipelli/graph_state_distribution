@@ -19,8 +19,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with frank:
         q_ent_bob = epr_sock["bob"].recv_keep()[0]
         q_ent_bob.H()
-        label["frank"]["bob"]["label"] = 0
-        label["frank"]["bob"]["shape"] = 0
+
         frank.flush()
 
         """ 

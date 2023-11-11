@@ -6,18 +6,9 @@ f = open('results.json')
 dictionary = json.load(f)
 f.close()
 
-# parte nuova
 # introduco un dizionario di etichette
 # in ciascun indice salvero lo stato iniziale dei qubit e 
-# li aggiornero dopo ogni misurazione y
-""" label = {"alice": {},
-         "bob": {},
-         "charlie": {},
-         "david": {},
-         "erin": {},
-         "frank": {},
-         "gary": {}} """
-
+# li aggiornero dopo ogni misurazione 
 label_names = ['alice', 'bob', 'charlie', 'david', 'erin', 'frank', 'gary']
 values = ['label', 'shape']
 
@@ -27,13 +18,19 @@ label = {l1: {
             } for l2 in label_names
         } for l1 in label_names}
 
-def XOR_3 ( a, b, c):
+def XOR_3 (a: int, b: int, c: int):
+    """
+        Effettua lo XOR fra i tre valori di input, ritorna 1 o 0
+    """
     if (a+b+c) == 1 or (a+b+c) == 3:
         return 1
     else :
         return 0
     
-def XOR_2 (a,b):
+def XOR_2 (a: int, b: int):
+    """
+        Effettua lo XOR fra i due valori di input, ritorna 1 o 0
+    """
     if (a+b) == 1 :
         return 1
     else :

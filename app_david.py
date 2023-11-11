@@ -21,8 +21,7 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with david:
         q_ent_charlie = epr_sock["charlie"].create_keep()[0]
         q_ent_charlie.H()
-        label["david"]["charlie"]["label"] = 0
-        label["david"]["charlie"]["shape"] = 0
+
         david.flush()
 
         """ 

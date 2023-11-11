@@ -21,8 +21,6 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
     with alice:
         q_ent_erin : Qubit = epr_sock["erin"].recv_keep()[0]
         q_ent_erin.H()
-        label["alice"]["erin"]["label"] = 0
-        label["alice"]["erin"]["shape"] = 0
         
         alice.flush()
 
