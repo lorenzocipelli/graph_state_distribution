@@ -59,7 +59,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         bob_sock.send("go2") # per procedere con lo SE di Bob  
 
         bob_sock.recv()
-
+        m_erin.X()
+        m_erin.Z()
         if label['charlie']['erin']['shape'] == 1:
             q_ent_erin.S()
         

@@ -38,7 +38,8 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
                             qubit_to_rotate=q_ent_charlie)
 
         bob_sock.recv()
-
+        m_charlie.X()
+        m_charlie.Z()
         if label['david']['charlie']['shape'] == 1:
             q_ent_charlie.S()
         
