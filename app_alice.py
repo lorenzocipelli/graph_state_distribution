@@ -48,10 +48,14 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         
         bob_sock.recv()
 
-        m_erin = q_ent_erin.measure() # basis=0 -> X ; basis=1 -> Y ; basis=2 -> Z 
+        if label['alice']['erin']['shape'] == 1:
+            q_ent_erin.S()
 
-    #print("Alice measure -> " + str(label["alice"]))
-    #dictionary["alice"].append(int(out))
+        m_erin = q_ent_erin.measure() # basis=0 -> X ; basis=1 -> Y ; basis=2 -> Z 
+        
+
+    print("Alice measure -> " + str(int(m_erin)))
+    #dictionary["alice"].append(int(m_erin))
     #update_json()
     
     #return {"measured": int(out)}

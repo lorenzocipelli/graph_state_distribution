@@ -9,7 +9,7 @@
   OUT: null
   PRC: 40
   QGR:
-    8733439847284:
+    8771589961553:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -20,10 +20,10 @@
   QID:
   - 0
   SID: 0
-  SIT: 10183.0
+  SIT: 8876.0
   VID:
   - 0
-  WCT: '2023-11-09 10:04:35.469846'
+  WCT: '2023-11-11 09:41:56.538117'
 - AID: 0
   ANG: null
   HFL: null
@@ -35,15 +35,7 @@
   OUT: null
   PRC: 51
   QGR:
-    8733438697771:
-      is_entangled: true
-      qubit_ids:
-      - - bob
-        - 1
-      - - frank
-        - 0
-      state: null
-    8733439847284:
+    8771589961553:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -51,13 +43,21 @@
       - - charlie
         - 0
       state: null
+    8771589992707:
+      is_entangled: true
+      qubit_ids:
+      - - bob
+        - 1
+      - - frank
+        - 0
+      state: null
   QID:
   - 1
   SID: 0
-  SIT: 13183.0
+  SIT: 11876.0
   VID:
   - 1
-  WCT: '2023-11-09 10:04:35.480830'
+  WCT: '2023-11-11 09:41:56.547350'
 - AID: 0
   ANG:
     den: 2
@@ -73,7 +73,7 @@
   OUT: null
   PRC: 1
   QGR:
-    8733438697771:
+    8771589992707:
       is_entangled: true
       qubit_ids:
       - - bob
@@ -81,7 +81,7 @@
       - - frank
         - 0
       state: null
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -102,10 +102,10 @@
   QID:
   - 0
   SID: 1
-  SIT: 4051371.0
+  SIT: 4234800.0
   VID:
   - 0
-  WCT: '2023-11-09 10:04:38.814712'
+  WCT: '2023-11-11 09:42:00.145426'
 - AID: 0
   ANG: null
   HFL: null
@@ -118,7 +118,7 @@
   OUT: null
   PRC: 2
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -140,11 +140,11 @@
   - 0
   - 1
   SID: 2
-  SIT: 4558503.0
+  SIT: 4740799.0
   VID:
   - 0
   - 1
-  WCT: '2023-11-09 10:04:40.605407'
+  WCT: '2023-11-11 09:42:01.268908'
 - AID: 0
   ANG:
     den: 2
@@ -160,7 +160,7 @@
   OUT: null
   PRC: 1
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -181,10 +181,10 @@
   QID:
   - 0
   SID: 3
-  SIT: 4559577.0
+  SIT: 4741852.0
   VID:
   - 0
-  WCT: '2023-11-09 10:04:40.813442'
+  WCT: '2023-11-11 09:42:01.444612'
 - AID: 0
   ANG:
     den: 2
@@ -200,7 +200,7 @@
   OUT: null
   PRC: 3
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -221,10 +221,10 @@
   QID:
   - 1
   SID: 3
-  SIT: 4560577.0
+  SIT: 4742852.0
   VID:
   - 1
-  WCT: '2023-11-09 10:04:40.953084'
+  WCT: '2023-11-11 09:42:01.577150'
 - AID: 0
   ANG: null
   HFL: null
@@ -237,7 +237,7 @@
   OUT: 1
   PRC: 3
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -256,10 +256,10 @@
   QID:
   - 0
   SID: 4
-  SIT: 4561322.0
+  SIT: 4743567.0
   VID:
   - 0
-  WCT: '2023-11-09 10:04:41.475921'
+  WCT: '2023-11-11 09:42:02.144979'
 - AID: 0
   ANG:
     den: 2
@@ -275,7 +275,7 @@
   OUT: null
   PRC: 1
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -294,23 +294,23 @@
   QID:
   - 1
   SID: 5
-  SIT: 4562438.0
+  SIT: 4744637.0
   VID:
   - 1
-  WCT: '2023-11-09 10:04:41.602282'
+  WCT: '2023-11-11 09:42:02.189687'
 - AID: 0
   ANG: null
   HFL: null
   HLN: null
   INS: meas
-  LOG: Doing instruction meas with operands ['Q0=1', 'M0=1']
+  LOG: Doing instruction meas with operands ['Q0=1', 'M0=0']
   OPR:
   - Q0=1
-  - M0=1
-  OUT: 1
+  - M0=0
+  OUT: 0
   PRC: 3
   QGR:
-    8733438713771:
+    8771590007673:
       is_entangled: true
       qubit_ids:
       - - alice
@@ -327,7 +327,7 @@
   QID:
   - 1
   SID: 6
-  SIT: 4565622.0
+  SIT: 4747339.0
   VID:
   - 1
-  WCT: '2023-11-09 10:04:41.879160'
+  WCT: '2023-11-11 09:42:02.342365'

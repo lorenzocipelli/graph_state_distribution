@@ -60,9 +60,13 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
 
         bob_sock.recv()
 
+        if label['charlie']['erin']['shape'] == 1:
+            q_ent_erin.S()
+        
         m_erin = q_ent_erin.measure()
 
     
+    print("Charlie measure -> " + str(int(m_erin)))
     #rw_json("Charlie", m_erin)
     #dictionary["charlie"].append(int(out))
     #update_json()
