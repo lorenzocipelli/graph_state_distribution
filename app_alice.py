@@ -48,8 +48,9 @@ def main(app_config=None, belongs_W=True, other_nodes=[]):
         
         bob_sock.recv()
 
-        m_erin.X()
-        m_erin.Z()
+        if label['alice']['erin']['label'] == 1:
+            q_ent_erin.X()
+            q_ent_erin.Z()
 
         if label['alice']['erin']['shape'] == 1:
             q_ent_erin.S()
