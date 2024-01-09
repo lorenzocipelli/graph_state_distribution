@@ -36,8 +36,7 @@ Following the graphical tools that were described in the paper:
 * **Vertex deletion**: this operation removes one vertex and all the associated edges from the graph. Physically, it is implemented by the Pauli measurement of the relevant
 qubit in the Z basis.
 * **Local complementation** on a vertex: this graph operation inverts the sub-graph induced by the neighborhood
-*N_a* of the concerned vertex *a*—the set of vertices adjacent to *a*. It is implemented by applying
-the relevant operation to the qubits of *a* ∪ *N_a*, described by the quantum operator ![loc_complementation](/images/local_complementation.png "Local Complementation")
+*N_a* of the concerned vertex *a*—the set of vertices adjacent to *a*.
 * **Edge addition (deletion)**: by applying a controlled-Z
 operation between two qubits belonging to the same
 node, we create (delete) an edge between two non-adjacent (adjacent) vertices.
