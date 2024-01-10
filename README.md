@@ -1,5 +1,5 @@
 # Distributing Graph State over arbitrary Quantum Networks
-Everything theoretical aspect of our work must be attributed to the work of the authors of the paper: 
+Every theoretical aspect of our work must be attributed to the work of the authors of the paper: 
 * **Clément Meignant** *(1)*
 * **Damian Markham** *(1)*
 * **Frédéric Grosshans** *(2)*
